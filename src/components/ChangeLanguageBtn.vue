@@ -1,3 +1,4 @@
+<!--切换语言按钮-->
 <template>
   <div id="ChangeLanguageBtn" @click="changeLanguage">
     <NButton v-if="state.curLanguage === 'cn'">Eng</NButton>
