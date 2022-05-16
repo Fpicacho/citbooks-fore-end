@@ -1,5 +1,16 @@
 <template>
-  <div class="about">
-    <p>{{ $t('test.a') }}</p>
-  </div>
+  <p>{{ accountInUSD }}</p>
 </template>
+
+<script>
+export default {
+  props: {
+    accountBalance: "123000"
+  },
+  computed: {
+    accountInUSD() {
+      return '$' + this.accountBalance
+    }
+  }
+}
+</script>

@@ -1,9 +1,7 @@
 <template>
-  <!--  <nav>-->
-  <!--    <router-link to="/">Home</router-link>-->
-  <!--    |-->
-  <!--    <router-link to="/about">About</router-link>-->
-  <!--  </nav>-->
+  <div class="test">
+    <Nav></Nav>
+  </div>
   <router-view/>
 </template>
 
@@ -18,7 +16,7 @@
 @media only screen and (min-width: 374px) and (max-width: 413px) {
   html {
     font-size: 100px;
-
+  }
 }
 
 @media only screen and (min-width: 414px) {
@@ -27,11 +25,23 @@
   }
 }
 
-#app {
-  font-size: 0.16rem;
-  color: #333333;
+body {
+  margin: 0;
+  padding: 0;
+  #app {
+    font-size: 0.16rem;
+    color: #333333;
+  }
+  ul,li{
+    margin: 0;
+    padding: 0;
+  }
+  li{
+    list-style: none;
+  }
 }
 </style>
 <script setup>
+import Nav from '@/components/Nav'
 
 </script>

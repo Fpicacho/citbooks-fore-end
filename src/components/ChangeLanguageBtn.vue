@@ -7,11 +7,9 @@
 </template>
 
 <script setup>
-import {reactive} from 'vue'
+import {reactive,computed} from 'vue'
 import {useI18n} from 'vue-i18n'
-
 import { NButton } from 'naive-ui'
-
 const {locale} = useI18n()
 
 const state = reactive({

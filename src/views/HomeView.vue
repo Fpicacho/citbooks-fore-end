@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <p>home</p>
+    <Banner/>
+    <NewsList/>
   </div>
 </template>
 
@@ -9,5 +10,6 @@
 </style>
 
 <script setup>
-
+import Banner from '@/components/HomeView/Banner'
+import NewsList from '@/components/HomeView/NewsList'
 </script>

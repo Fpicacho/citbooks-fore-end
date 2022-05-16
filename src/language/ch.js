@@ -1,6 +1,6 @@
 module.exports = {
   // 头部菜单
-  test: {
-    a: "退出",
+  nva: {
+    title: "网站导航",
   },
 };
