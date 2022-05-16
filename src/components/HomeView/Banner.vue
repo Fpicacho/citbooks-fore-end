@@ -1,6 +1,6 @@
 <template>
   <div id="Banner">
-    <n-carousel autoplay draggable>
+    <n-carousel autoplay draggable show-arrow>
       <img
           v-for="(item,index) in BannerList"
           :key="index"

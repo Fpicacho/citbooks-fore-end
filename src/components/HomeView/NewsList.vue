@@ -13,6 +13,7 @@
           </li>
         </ul>
       </li>
+      <div style="float:left;margin-top: 30px;width: 1px;height: 200px; background: #eeeeee;" class="decorate"></div>
       <li class="listBox">
         <div class="l">
           <div class="icon">📖 书展资讯</div>
@@ -25,6 +26,7 @@
           </li>
         </ul>
       </li>
+      <div style="float:left;margin-top: 30px;width: 1px;height: 200px; background: #eeeeee;" class="decorate"></div>
       <li class="listBox">
         <div class="l">
           <div class="title">📺 宣传视频</div>
@@ -94,8 +96,8 @@ const booxList = ref([
   padding: 0 16px;
   display: flex;
   flex-direction: row;
-
   .listMenu {
+    background: #fff;
     .listBox {
       .l {
         display: flex;
@@ -131,4 +133,30 @@ const booxList = ref([
     }
   }
 }
+@media only screen and (max-width: 374px) {
+  .decorate{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 374px) and (max-width: 413px) {
+  .decorate{
+    display: none;
+  }
+}
+@media only screen and (min-width: 414px) {
+  .listMenu{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px 20px rgb(0 0 0 / 3%);
+    font-size: 14px;
+    .listBox{
+      width: 30%;
+    }
+  }
+}
+
 </style>

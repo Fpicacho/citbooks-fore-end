@@ -1,7 +1,5 @@
 <template>
-  <div class="test">
-    <Nav></Nav>
-  </div>
+  <Nav></Nav>
   <router-view/>
 </template>
 
@@ -31,6 +29,12 @@ body {
   #app {
     font-size: 0.16rem;
     color: #333333;
+    #Nav{
+      position:sticky;
+      top: 0;
+      background: #fff;
+      z-index: 2;
+    }
   }
   ul,li{
     margin: 0;
