@@ -43,7 +43,7 @@ const BannerList = ref([
 @media only screen and (min-width: 414px) {
   .carousel-img {
     width: 100%;
-    height: 595px;
+    height: 590px;
     object-fit: cover;
   }
   .n-carousel__dots{

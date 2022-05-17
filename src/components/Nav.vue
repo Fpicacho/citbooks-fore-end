@@ -6,99 +6,150 @@
     <div class="navList">
       <n-dropdown trigger="click"
                   :options="options"
-                  :show-arrow="true">
+                  :show-arrow="true"
+                  @select="handleSelect"
+      >
         <n-button>
           <n-icon>
             <cash-icon/>
           </n-icon>
         </n-button>
       </n-dropdown>
+      <ChangeLanguageBtn style="margin-left: 10px" @click="ChangeLanguage"/>
     </div>
-
     <div class="pc-navList">
-      <n-menu mode="horizontal" :options="menuOptions" />
+      <n-menu mode="horizontal" :options="options" @update:value="handleSelect"/>
+      <ChangeLanguageBtn @click="ChangeLanguage"/>
     </div>
   </div>
 </template>
 
 <script setup>
-import {ref, h} from "vue";
+import {ref,reactive} from "vue";
 import {NMenu} from "naive-ui";
+import ChangeLanguageBtn from "@/components/ChangeLanguageBtn"
 import {List as CashIcon} from '@vicons/ionicons5'
 
-const menuOptions = [{
-  label: "关于我们",
-  key: "AboutUs",
-  children: [{
-    label: "公司简介",
-    key: "CompanyProfile",
-  }, {
-    label: "组织结构",
-    key: "OrganizationalStructure",
-  }, {
-    label: "合作伙伴",
-    key: "Partner",
-  }, {
-    label: "公司文化",
-    key: "CompanyCulture",
-  }]
-}, {
-  label: "公司业务",
-  key: "Business",
-  children: [{
-    label: "原版图书进口",
-    key: "ImportOfOriginalBooks",
-  }, {
-    label: "电子资源进口",
-    key: "ImportOfElectronicResources",
-  }, {
-    label: "报刊进口",
-    key: "NewspaperImport",
-  }, {
-    label: "出口业务",
-    key: "ExportBusiness",
-  }]
-}, {
-  label: "新闻动态",
-  key: "news",
-  children: [{
-    label: "媒体报道",
-    key: "MediaCoverage",
-  }, {
-    label: "行业资讯",
-    key: "IndustryInformation",
-  }, {
-    label: "企业新闻",
-    key: "CorporateNews",
-  }]
-}, {
-  label: "特色功能",
-  key: "SpecialFunction",
-  children: [{
-    label: "书展服务",
-    key: "BookFairServices",
-  }, {
-    label: "数据加工",
-    key: "DataProcessing",
-  }, {
-    label: "专业研究",
-    key: "ProfessionalStudies",
-  }]
-},{
-  label: "English",
-  key: "changeLanguage",
-}]
+const language = ref('cn')
 
-const options = ref([
+const options = reactive([
   {
-    type: "render",
-    key: "main",
-    render: renderCustomHeader
+    label:"关于我们",
+    key: "AboutUs",
+    children:[
+      {
+        label:"公司简介",
+        key:"about"
+      },
+      {
+        label: "组织结构",
+        key: "OrganizationalStructure",
+      }, {
+        label: "合作伙伴",
+        key: "Partner",
+      }, {
+        label: "公司文化",
+        key: "CompanyCulture",
+      },{
+        label:"党建和社会责任",
+        key:"responsibility"
+      }
+    ]
+  }, {
+    label: "公司业务",
+    key: "Business",
+    children: [{
+      label: "原版图书进口",
+      key: "ImportOfOriginalBooks",
+    }, {
+      label: "电子资源进口",
+      key: "ImportOfElectronicResources",
+    }, {
+      label: "报刊进口",
+      key: "NewspaperImport",
+    }, {
+      label: "出口业务",
+      key: "ExportBusiness",
+    }]
+  },{
+    label: "新闻动态",
+    key: "news",
+    children: [{
+      label: "媒体报道",
+      key: "MediaCoverage",
+    }, {
+      label: "行业资讯",
+      key: "IndustryInformation",
+    }, {
+      label: "企业新闻",
+      key: "CorporateNews",
+    }]
+  }, {
+    label: "特色功能",
+    key: "SpecialFunction",
+    children: [{
+      label: "书展服务",
+      key: "BookFairServices",
+    }, {
+      label: "数据加工",
+      key: "DataProcessing",
+    }, {
+      label: "专业研究",
+      key: "ProfessionalStudies",
+    }]
   }
 ])
 
-function renderCustomHeader() {
-  return h(NMenu, {options: menuOptions, accordion: "accordion"})
+function handleSelect(key){
+  // 准备进行跳转逻辑
+  console.log(key)
+}
+
+
+function ChangeLanguage(){
+  if(language.value === 'cn'){
+    language.value = 'en'
+    options[0].label = 'AboutUs'
+    options[0].children[0].label = 'Company Profile'
+    options[0].children[1].label = 'OrganizationalStructure'
+    options[0].children[2].label = 'Partner'
+    options[0].children[3].label = 'CompanyCulture'
+    options[0].children[4].label = 'Responsibility'
+    options[1].label = 'Business'
+    options[1].children[0].label = 'ImportOfOriginalBooks'
+    options[1].children[1].label = 'ImportOfElectronicResources'
+    options[1].children[2].label = 'NewspaperImport'
+    options[1].children[3].label = 'ExportBusiness'
+    options[2].label = 'News'
+    options[2].children[0].label = 'MediaCoverage'
+    options[2].children[1].label = 'IndustryInformation'
+    options[2].children[2].label = 'CorporateNews'
+    options[3].label = 'SpecialFunction'
+    options[3].children[0].label = 'BookFairServices'
+    options[3].children[1].label = 'DataProcessing'
+    options[3].children[2].label = 'ProfessionalStudies'
+  }else{
+    language.value = 'cn'
+    options[0].label = '关于我们'
+    options[0].children[0].label = '公司简介'
+    options[0].children[1].label = '组织结构'
+    options[0].children[2].label = '组织结构'
+    options[0].children[3].label = '公司文化'
+    options[0].children[4].label = '党建和社会责任'
+    options[1].label = '公司业务'
+    options[1].children[0].label = '原版图书进口'
+    options[1].children[1].label = '电子资源进口'
+    options[1].children[2].label = '报刊进口'
+    options[1].children[3].label = '出口业务'
+    options[2].label = '新闻动态'
+    options[2].children[0].label = '媒体报道'
+    options[2].children[1].label = '行业资讯'
+    options[2].children[2].label = '企业新闻'
+    options[3].label = '特色功能'
+    options[3].children[0].label = '书展服务'
+    options[3].children[1].label = '数据加工'
+    options[3].children[2].label = '专业研究'
+  }
 }
 
 </script>
@@ -114,7 +165,7 @@ function renderCustomHeader() {
 }
 @media only screen and (max-width: 374px) {
   .navList{
-    display: block;
+    display: flex;
   }
   .pc-navList{
     display: none;
@@ -123,7 +174,7 @@ function renderCustomHeader() {
 
 @media only screen and (min-width: 374px) and (max-width: 413px) {
   .navList{
-    display: block;
+    display: flex;
   }
   .pc-navList{
     display: none;
@@ -135,7 +186,8 @@ function renderCustomHeader() {
     display: none;
   }
   .pc-navList{
-    display: block;
+    display: flex;
+    align-items: center;
   }
 }
 </style>

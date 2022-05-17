@@ -2,17 +2,32 @@
   <div class="home">
     <Banner/>
     <NewsList/>
+    <div class="clear"></div>
+    <BusinessList/>
   </div>
 </template>
 
 <style scoped lang="scss">
+.home{
+  background: #fff;
+}
+.clear{
+  display: none;
+}
 @media only screen and (min-width: 414px)  {
+  .home{
+    background: #f2f3f4;
+  }
   #NewsList{
     position: absolute;
-    top: 750px;
+    top: 760px;
     left: 50%;
-    width: 1492px;
+    width: 80%;
     transform: translate(-50%, -50%);
+  }
+  .clear{
+    display: block;
+    height: 220px;
   }
 }
 </style>
@@ -20,4 +35,5 @@
 <script setup>
 import Banner from '@/components/HomeView/Banner'
 import NewsList from '@/components/HomeView/NewsList'
+import BusinessList from '@/components/HomeView/BusinessList'
 </script>

@@ -3,8 +3,8 @@
     <ul class="listMenu">
       <li class="listBox">
         <div class="l">
-          <div class="title">📰 新闻资讯</div>
-          <span class="link">查看更多>></span>
+          <div class="title">📰 {{$t('HomeNewsList.news')}}</div>
+          <span class="link">{{$t('HomeNewsList.seeMore')}} >></span>
         </div>
         <ul class="r">
           <li v-for="item in newsList" :key="item.id">
@@ -16,8 +16,8 @@
       <div style="float:left;margin-top: 30px;width: 1px;height: 200px; background: #eeeeee;" class="decorate"></div>
       <li class="listBox">
         <div class="l">
-          <div class="icon">📖 书展资讯</div>
-          <span class="link">查看更多>></span>
+          <div class="icon">📖 {{$t('HomeNewsList.bookFair')}}</div>
+          <span class="link">{{$t('HomeNewsList.seeMore')}}   >></span>
         </div>
         <ul class="r">
           <li v-for="item in booxList" :id="item.id">
@@ -29,7 +29,7 @@
       <div style="float:left;margin-top: 30px;width: 1px;height: 200px; background: #eeeeee;" class="decorate"></div>
       <li class="listBox">
         <div class="l">
-          <div class="title">📺 宣传视频</div>
+          <div class="title">📺 {{$t('HomeNewsList.video')}}</div>
         </div>
         <video width="320" height="240" controls="controls">
           <source src="movie.mp4" type="video/mp4">
@@ -153,6 +153,7 @@ const booxList = ref([
     border-radius: 15px;
     box-shadow: 0 5px 20px 20px rgb(0 0 0 / 3%);
     font-size: 14px;
+    overflow: hidden;
     .listBox{
       width: 30%;
     }
