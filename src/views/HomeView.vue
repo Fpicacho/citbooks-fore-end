@@ -2,8 +2,9 @@
   <div class="home">
     <Banner/>
     <NewsList/>
-    <div class="clear"></div>
+    <div class="clear"/>
     <BusinessList/>
+    <AboutUs/>
   </div>
 </template>
 
@@ -36,4 +37,5 @@
 import Banner from '@/components/HomeView/Banner'
 import NewsList from '@/components/HomeView/NewsList'
 import BusinessList from '@/components/HomeView/BusinessList'
+import AboutUs from '@/components/HomeView/AboutUs'
 </script>

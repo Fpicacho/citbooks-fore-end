@@ -53,6 +53,9 @@ const options = reactive([
       },{
         label:"党建和社会责任",
         key:"responsibility"
+      },{
+        label:"招聘信息",
+        key:"jobOffers"
       }
     ]
   }, {
@@ -133,7 +136,7 @@ function ChangeLanguage(){
     options[0].label = '关于我们'
     options[0].children[0].label = '公司简介'
     options[0].children[1].label = '组织结构'
-    options[0].children[2].label = '组织结构'
+    options[0].children[2].label = '合作伙伴'
     options[0].children[3].label = '公司文化'
     options[0].children[4].label = '党建和社会责任'
     options[1].label = '公司业务'

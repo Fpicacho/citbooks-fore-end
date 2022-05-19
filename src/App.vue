@@ -1,6 +1,8 @@
 <template>
-  <Nav></Nav>
+  <Nav/>
   <router-view/>
+  <Footer/>
+  <Copyright/>
 </template>
 
 <style lang="scss">
@@ -47,5 +49,6 @@ body {
 </style>
 <script setup>
 import Nav from '@/components/Nav'
-
+import Footer from '@/components/Footer'
+import Copyright from '@/components/Copyright'
 </script>
