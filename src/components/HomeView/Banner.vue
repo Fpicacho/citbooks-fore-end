@@ -32,7 +32,7 @@ const BannerList = ref([
   }
 }
 
-@media only screen and (min-width: 374px) and (max-width: 413px) {
+@media only screen and (min-width: 374px) and (max-width: 769px) {
   .carousel-img {
     width: 100%;
     height: 240px;
@@ -40,7 +40,7 @@ const BannerList = ref([
   }
 }
 
-@media only screen and (min-width: 414px) {
+@media only screen and (min-width: 770px) {
   .carousel-img {
     width: 100%;
     height: 590px;

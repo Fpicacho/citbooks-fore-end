@@ -1,41 +1,43 @@
 <template>
   <div id="NewsList">
-    <ul class="listMenu">
-      <li class="listBox">
-        <div class="l">
-          <div class="title">📰 {{$t('HomeNewsList.news')}}</div>
-          <span class="link">{{$t('HomeNewsList.seeMore')}} >></span>
-        </div>
-        <ul class="r">
-          <li v-for="item in newsList" :key="item.id">
-            <span class="title2">{{ item.title }}</span>
-            <span class="date">{{ item.date }}</span>
-          </li>
-        </ul>
-      </li>
-      <div style="float:left;margin-top: 30px;width: 1px;height: 200px; background: #eeeeee;" class="decorate"></div>
-      <li class="listBox">
-        <div class="l">
-          <div class="icon">📖 {{$t('HomeNewsList.bookFair')}}</div>
-          <span class="link">{{$t('HomeNewsList.seeMore')}}   >></span>
-        </div>
-        <ul class="r">
-          <li v-for="item in booxList" :id="item.id">
-            <span class="title2">{{ item.title }}</span>
-            <span class="link">{{ item.date }}</span>
-          </li>
-        </ul>
-      </li>
-      <div style="float:left;margin-top: 30px;width: 1px;height: 200px; background: #eeeeee;" class="decorate"></div>
-      <li class="listBox">
-        <div class="l">
-          <div class="title">📺 {{$t('HomeNewsList.video')}}</div>
-        </div>
-        <video width="320" height="240" controls="controls">
-          <source src="movie.mp4" type="video/mp4">
-        </video>
-      </li>
-    </ul>
+    <div class="container">
+      <ul class="listMenu">
+        <li class="listBox">
+          <div class="l">
+            <div class="title">📰 {{$t('HomeNewsList.news')}}</div>
+            <span class="cursor">{{$t('HomeNewsList.seeMore')}} >></span>
+          </div>
+          <ul class="r">
+            <li v-for="item in newsList" :key="item.id" class="cursor">
+              <span class="title2">{{ item.title }}</span>
+              <span class="date">{{ item.date }}</span>
+            </li>
+          </ul>
+        </li>
+        <div style="float:left;margin-top: 30px;width: 1px;height: 200px; background: #eeeeee;" class="decorate"></div>
+        <li class="listBox">
+          <div class="l">
+            <div class="icon">📖 {{$t('HomeNewsList.bookFair')}}</div>
+            <span class="cursor">{{$t('HomeNewsList.seeMore')}} >></span>
+          </div>
+          <ul class="r">
+            <li v-for="item in booxList" :id="item.id" class="cursor">
+              <span class="title2">{{ item.title }}</span>
+              <span>{{ item.date }}</span>
+            </li>
+          </ul>
+        </li>
+        <div style="float:left;margin-top: 30px;width: 1px;height: 200px; background: #eeeeee;" class="decorate"></div>
+        <li class="listBox">
+          <div class="l">
+            <div class="title">📺 {{$t('HomeNewsList.video')}}</div>
+          </div>
+          <video width="320" height="240" controls="controls">
+            <source src="movie.mp4" type="video/mp4">
+          </video>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -93,9 +95,10 @@ const booxList = ref([
 
 <style scoped lang="scss">
 #NewsList {
-  padding: 0 16px;
+  padding: 0 16px 20px;
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
   .listMenu {
     background: #fff;
     .listBox {
@@ -105,15 +108,22 @@ const booxList = ref([
         align-items: center;
         font-size: 18px;
         padding: 20px 0;
+        span{
+          transition: color .3s;
+          &:hover{
+            transition: color .3s;
+            color:#ea4335
+          }
+        }
       }
-
       .r {
         li {
           display: flex;
           justify-content: space-between;
           margin-bottom: 10px;
+          transition: color .3s;
           &:nth-child(1){
-            color: red;
+            color: #ea4335;
           }
           .title2 {
             width: 60%;
@@ -122,6 +132,10 @@ const booxList = ref([
             overflow: hidden; /*超出的文本隐藏*/
             text-overflow: ellipsis; /* 溢出用省略号*/
             -webkit-box-orient: vertical;/*伸缩盒子的子元素排列：从上到下*/
+          }
+          &:hover{
+            color: #ea4335;
+            transition: color .3s
           }
         }
       }
@@ -132,6 +146,9 @@ const booxList = ref([
       }
     }
   }
+  .cursor{
+    cursor: pointer;
+  }
 }
 @media only screen and (max-width: 374px) {
   .decorate{
@@ -139,15 +156,15 @@ const booxList = ref([
   }
 }
 
-@media only screen and (min-width: 374px) and (max-width: 413px) {
+@media only screen and (min-width: 374px) and (max-width: 769px) {
   .decorate{
     display: none;
   }
 }
-@media only screen and (min-width: 414px) {
+@media only screen and (min-width: 770px) {
   .listMenu{
     display: flex;
-    width: 100%;
+    //width: 100%;
     justify-content: space-between;
     padding: 20px 40px;
     border-radius: 15px;
@@ -157,6 +174,10 @@ const booxList = ref([
     .listBox{
       width: 30%;
     }
+  }
+  .container{
+    width: 85%;
+    margin: 0 auto;
   }
 }
 

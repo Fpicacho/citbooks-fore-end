@@ -1,7 +1,9 @@
 <template>
-  <div id="Nav">
+    <div id="Nav">
     <div class="logo">
-      <img src="../assets/img/logo.png" alt="">
+      <router-link to="/">
+        <img src="../assets/img/logo.png" alt="">
+      </router-link>
     </div>
     <div class="navList">
       <n-dropdown trigger="click"
@@ -88,7 +90,7 @@ const options = reactive([
       key: "CorporateNews",
     }]
   }, {
-    label: "特色功能",
+    label: "特色服务",
     key: "SpecialFunction",
     children: [{
       label: "书展服务",
@@ -118,6 +120,7 @@ function ChangeLanguage(){
     options[0].children[2].label = 'Partner'
     options[0].children[3].label = 'CompanyCulture'
     options[0].children[4].label = 'Responsibility'
+    options[0].children[5].label = 'Job Offers'
     options[1].label = 'Business'
     options[1].children[0].label = 'ImportOfOriginalBooks'
     options[1].children[1].label = 'ImportOfElectronicResources'
@@ -139,6 +142,7 @@ function ChangeLanguage(){
     options[0].children[2].label = '合作伙伴'
     options[0].children[3].label = '公司文化'
     options[0].children[4].label = '党建和社会责任'
+    options[0].children[5].label = '招聘信息'
     options[1].label = '公司业务'
     options[1].children[0].label = '原版图书进口'
     options[1].children[1].label = '电子资源进口'
@@ -148,7 +152,7 @@ function ChangeLanguage(){
     options[2].children[0].label = '媒体报道'
     options[2].children[1].label = '行业资讯'
     options[2].children[2].label = '企业新闻'
-    options[3].label = '特色功能'
+    options[3].label = '特色服务'
     options[3].children[0].label = '书展服务'
     options[3].children[1].label = '数据加工'
     options[3].children[2].label = '专业研究'
@@ -166,25 +170,35 @@ function ChangeLanguage(){
   padding: 16px;
   border-bottom: 1px solid #efeff5;
 }
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 449px) {
   .navList{
     display: flex;
   }
   .pc-navList{
     display: none;
   }
+  .logo{
+    img{
+      width: 150px;
+    }
+  }
 }
 
-@media only screen and (min-width: 374px) and (max-width: 413px) {
+@media only screen and (min-width: 374px) and (max-width: 769px) {
   .navList{
     display: flex;
   }
   .pc-navList{
     display: none;
   }
+  .logo{
+    img{
+      width: 150px;
+    }
+  }
 }
 
-@media only screen and (min-width: 414px) {
+@media only screen and (min-width: 770px) {
   .navList{
     display: none;
   }

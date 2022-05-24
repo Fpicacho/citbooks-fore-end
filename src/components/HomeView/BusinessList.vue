@@ -75,6 +75,12 @@ export default {
     justify-content:space-around;
     color: #fff;
     margin-bottom: 20px;
+    transition: all .3s;
+    &:hover{
+      justify-content: space-between;
+      transition: all .3s;
+      cursor:pointer;
+    }
   }
   .a1{
     background: url('../../assets/img/BusinessListBgc1.jpg');
@@ -97,7 +103,7 @@ export default {
     background-size: 100% auto;
   }
 }
-@media only screen and (min-width: 414px)  {
+@media only screen and (min-width: 770px)  {
   #BusinessList{
     width: 80%;
     margin: 35px auto;

@@ -26,8 +26,7 @@ const changeLanguage = () => {
 #ChangeLanguageBtn{
   .n-button{
     width: 100%;
-    border: 0px;
+    border: 0;
   }
-
 }
 </style>

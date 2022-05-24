@@ -13,13 +13,13 @@
   }
 }
 
-@media only screen and (min-width: 374px) and (max-width: 413px) {
+@media only screen and (min-width: 374px) and (max-width: 769px) {
   html {
     font-size: 100px;
   }
 }
 
-@media only screen and (min-width: 414px) {
+@media only screen and (min-width: 770px) {
   html {
     font-size: 110px;
   }

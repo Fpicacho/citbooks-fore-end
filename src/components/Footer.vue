@@ -98,7 +98,7 @@ p,h1{
     }
   }
 }
-@media only screen and (min-width: 414px) {
+@media only screen and (min-width: 770px) {
   .container{
     width: 85%;
     display: flex;

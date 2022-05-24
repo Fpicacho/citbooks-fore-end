@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <Banner/>
-    <NewsList/>
-    <div class="clear"/>
     <BusinessList/>
-    <AboutUs/>
+    <NewsList/>
+<!--    <div class="clear"/>-->
+    <ToggleList/>
   </div>
 </template>
 
@@ -15,17 +15,17 @@
 .clear{
   display: none;
 }
-@media only screen and (min-width: 414px)  {
+@media only screen and (min-width: 770px)  {
   .home{
     background: #f2f3f4;
   }
-  #NewsList{
-    position: absolute;
-    top: 760px;
-    left: 50%;
-    width: 80%;
-    transform: translate(-50%, -50%);
-  }
+  //#NewsList{
+  //  position: absolute;
+  //  top: 760px;
+  //  left: 50%;
+  //  width: 80%;
+  //  transform: translate(-50%, -50%);
+  //}
   .clear{
     display: block;
     height: 220px;
@@ -37,5 +37,5 @@
 import Banner from '@/components/HomeView/Banner'
 import NewsList from '@/components/HomeView/NewsList'
 import BusinessList from '@/components/HomeView/BusinessList'
-import AboutUs from '@/components/HomeView/AboutUs'
+import ToggleList from '@/components/HomeView/ToggleList'
 </script>
