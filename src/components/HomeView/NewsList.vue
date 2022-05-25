@@ -154,11 +154,19 @@ const booxList = ref([
   .decorate{
     display: none;
   }
+  .container{
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 374px) and (max-width: 769px) {
   .decorate{
     display: none;
+  }
+  .container{
+    width: 100%;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 770px) {
@@ -171,12 +179,13 @@ const booxList = ref([
     box-shadow: 0 5px 20px 20px rgb(0 0 0 / 3%);
     font-size: 14px;
     overflow: hidden;
+    margin-bottom: 30px;
     .listBox{
       width: 30%;
     }
   }
   .container{
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
   }
 }

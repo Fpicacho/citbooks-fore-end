@@ -67,4 +67,12 @@ module.exports = {
       "Through years of operation, our company has established cooperative relations or business contacts with nearly 1,000 well-known publishing groups or publishing houses around the world, maintaining good business relations and becoming one of the largest agents in mainland China. Our company strives to expand the procurement channels for books in small languages, out-of-print or long-published books, especially opening up the procurement channels for books in Southeast Asia, which improves the difficulty of purchasing books in this region in the past and improves customer satisfaction. The overall booking rate of original foreign language books ranks among the best in the industry.",
     ],
   },
+  ToggleList: {
+    title: [
+      "Work together for a win-win situation and build a new era of library collections with global partners.",
+      "Zhongke Company is willing to cooperate sincerely with other institutions such as overseas publishing houses, domestic college libraries, research institute document centers, public libraries and other institutions to jointly discuss the construction of library collections in the new era.",
+    ],
+    bar: ["About us", "Partner", "socialResponsibility"],
+    aus: ["Was founded in", "Registered capital", "Service object", "M"],
+  },
 };

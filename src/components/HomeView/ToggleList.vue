@@ -2,17 +2,17 @@
 <div id="PartnerList">
   <div class="container">
     <div class="titleBox">
-      <h1 style="color:#298dff">携手共赢，与全球合作伙伴共建图书馆藏新时代</h1>
-      <p style="color:#919191">中科公司愿与境外出版社、国内高等学校图书馆、研究院文献中心、公共图书馆等其他机构精诚合作、携手共赢，共同探讨新时代下的图书馆藏建设。</p>
+      <h1 style="color:#298dff">{{$t('ToggleList.title[0]')}}</h1>
+      <p style="color:#919191">{{$t('ToggleList.title[1]')}}</p>
     </div>
     <n-tabs type="segment">
-      <n-tab-pane name="chap1" tab="关于我们">
+      <n-tab-pane name="chap1" :tab="$t('ToggleList.bar[0]')">
         <ListAboutUs/>
       </n-tab-pane>
-      <n-tab-pane name="chap2" tab="合作伙伴">
+      <n-tab-pane name="chap2" :tab="$t('ToggleList.bar[1]')">
         <ListPartner/>
       </n-tab-pane>
-      <n-tab-pane name="chap3" tab="党建和社会责任">
+      <n-tab-pane name="chap3" :tab="$t('ToggleList.bar[2]')">
         <ListResponsibility/>
       </n-tab-pane>
     </n-tabs>
