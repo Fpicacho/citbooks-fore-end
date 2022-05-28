@@ -1,8 +1,9 @@
 <template>
+  <!--页脚 src/components/Footer.vue-->
 <div id="Footer">
   <div class="container">
     <div class="link">
-      <ul class="linkNav">
+      <ul class="linkNav wow bounceInLeft">
         <li class="linkNavList">
           <h1>{{$t('Footer[0]')}}</h1>
           <router-link to="/">{{$t('Footer[1]')}}</router-link>
@@ -20,7 +21,7 @@
           <router-link to="/">{{$t('Footer[11]')}}</router-link>
         </li>
       </ul>
-      <ul class="linkNav">
+      <ul class="linkNav wow bounceInLeft">
         <li class="linkNavList">
           <h1>{{$t('Footer[12]')}}</h1>
           <router-link to="/">{{$t('Footer[13]')}}</router-link>
@@ -35,7 +36,7 @@
         </li>
       </ul>
     </div>
-    <div class="information">
+    <div class="information wow bounceInUp">
       <div class="phoneBox">
         <p><a href="tel:010-88820201">010-88820201</a> <span>{{$t('Footer[20]')}}</span></p>
         <p><a href="tel:025-83314729">025-83314729</a> <span>{{$t('Footer[21]')}}</span></p>
@@ -60,9 +61,13 @@ p,h1{
   padding: 0;
 }
 #Footer{
-  background: #333333;
+  //background: #333333;
+  background: #fafafc;
   padding: 30px 16px;
-  color: #fff;
+  margin-top: 30px;
+  border-top: 1px solid rgb(239, 239, 245);
+  //color: #fff;
+  color: #2d2c2c;
   .linkNav{
     display: flex;
     justify-content: space-around;
@@ -75,14 +80,14 @@ p,h1{
       }
       a{
         margin-top:10px;
-        color: #aaa;
+        color: #333;
         font-size: 14px;
         text-decoration: none;
         display: block;
         transition: color .3s;
         &:hover{
           transition: color .3s;
-          color:#fff;
+          color:#007bff;
         }
       }
     }
@@ -95,12 +100,12 @@ p,h1{
         color: #298dff;
         text-decoration: none;
       }
-      span{
-        color: #fff;
-      }
+      //span{
+      //  color: #fff;
+      //}
       .workDay{
         font-size: 16px;
-        color: #fff;
+        //color: #fff;
         margin:20px 0;
       }
     }

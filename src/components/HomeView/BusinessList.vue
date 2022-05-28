@@ -2,14 +2,14 @@
   <div id="BusinessList">
     <ul>
       <li>
-        <div class="item a1">
+        <div class="item a1 wow bounceIn">
           <div>
             <h1 class="title">{{$t('BusinessList.Importoforiginalbooks')}}</h1>
             <p class="describe">{{$t('BusinessList.ImportoforiginalbooksMS')}}</p>
           </div>
           <p>{{$t('BusinessList.LearnMore')}}→</p>
         </div>
-        <div class="item a2">
+        <div class="item a2 wow bounceIn">
           <div>
             <h1 class="title">{{$t('BusinessList.Importofelectronicresources')}}</h1>
             <p class="describe">{{$t('BusinessList.ImportofelectronicresourcesMS')}}</p>
@@ -18,14 +18,14 @@
         </div>
       </li>
       <li>
-        <div class="item a3">
+        <div class="item a3 wow bounceIn">
           <div>
             <h1 class="title">{{$t('BusinessList.Newspaperimport')}}</h1>
             <p class="describe">{{$t('BusinessList.NewspaperimportMS')}}</p>
           </div>
           <p>{{$t('BusinessList.LearnMore')}}→</p>
         </div>
-        <div class="item a4">
+        <div class="item a4 wow bounceIn">
           <div>
             <h1 class="title">{{$t('BusinessList.Businessexport')}}</h1>
             <p class="describe">{{$t('BusinessList.BusinessexportMS')}}</p>
@@ -34,7 +34,7 @@
         </div>
       </li>
       <li>
-        <div class="item a5">
+        <div class="item a5 wow bounceIn">
           <div>
             <h1 class="title">{{$t('BusinessList.BookFairServices')}}</h1>
             <p class="describe">{{$t('BusinessList.BookFairServicesMS')}}</p>

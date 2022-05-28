@@ -1,5 +1,5 @@
-<!--切换语言按钮-->
 <template>
+  <!--切换语言按钮 src/components/ChangeLanguageBtn.vue-->
   <div id="ChangeLanguageBtn" @click="changeLanguage">
     <NButton v-if="state.curLanguage === 'cn'">English</NButton>
     <NButton v-else>中文</NButton>

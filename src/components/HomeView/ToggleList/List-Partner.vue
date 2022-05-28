@@ -1,7 +1,7 @@
 <template>
 <div id="Partner">
   <ul>
-    <li v-for="item in serveData" :key="item.id">
+    <li v-for="item in serveData" :key="item.id" class="wow flip">
       <img :src="item.img" alt="">
       <p>{{item.describe}}</p>
     </li>

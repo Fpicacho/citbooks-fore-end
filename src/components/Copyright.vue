@@ -1,5 +1,6 @@
 <template>
-  <div id="Copyright">
+  <!--版权页脚 src/components/Copyright.vue-->
+  <div id="Copyright" class="wow slideInUp">
     <div class="container">
       <p>{{$t('Copyright[0]')}}</p>
       <p>{{$t('Copyright[1]')}}</p>
@@ -19,11 +20,11 @@ export default {
 p {
   margin: 0 0 10px;
   padding: 0;
-  color: #fff;
+  color: #F9EAFF;
 }
 
 #Copyright {
-  background: #000;
+  background: #00C9A7;
   text-align: center;
   padding: 30px 16px;
   font-size: 12px;

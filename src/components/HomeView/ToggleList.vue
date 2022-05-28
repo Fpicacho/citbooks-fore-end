@@ -2,10 +2,10 @@
 <div id="PartnerList">
   <div class="container">
     <div class="titleBox">
-      <h1 style="color:#298dff">{{$t('ToggleList.title[0]')}}</h1>
-      <p style="color:#919191">{{$t('ToggleList.title[1]')}}</p>
+      <h1 style="color:#298dff" class="wow bounceInLeft">{{$t('ToggleList.title[0]')}}</h1>
+      <p style="color:#919191" class="wow bounceInRight">{{$t('ToggleList.title[1]')}}</p>
     </div>
-    <n-tabs type="segment">
+    <n-tabs type="segment" class="wow bounceInLeft">
       <n-tab-pane name="chap1" :tab="$t('ToggleList.bar[0]')">
         <ListAboutUs/>
       </n-tab-pane>
@@ -21,9 +21,9 @@
 </template>
 
 <script setup>
-import ListAboutUs from '@/components/HomeView/BusinessList/List-AboutUs'
-import ListPartner from '@/components/HomeView/BusinessList/List-Partner'
-import ListResponsibility from '@/components/HomeView/BusinessList/List-Responsibility'
+import ListAboutUs from '@/components/HomeView/ToggleList/List-AboutUs'
+import ListPartner from '@/components/HomeView/ToggleList/List-Partner'
+import ListResponsibility from '@/components/HomeView/ToggleList/List-Responsibility'
 </script>
 
 <style scoped lang="scss">

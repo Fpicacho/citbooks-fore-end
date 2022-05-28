@@ -1,5 +1,5 @@
 <template>
-  <div id="NewsList">
+  <div id="NewsList" class="wow flipInX">
     <div class="container">
       <ul class="listMenu">
         <li class="listBox">

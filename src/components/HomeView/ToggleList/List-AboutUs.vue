@@ -2,32 +2,33 @@
   <div id="AboutUs">
     <div class="container">
       <div class="box">
-        <div class="textBox">
+        <div class="textBox wow slideInLeft">
           <span>AboutUs.</span>
           <p>{{$t('ToggleList.bar[0]')}}</p>
         </div>
-        <div class="ContentContainer">
+        <div class="ContentContainer wow slideInRight">
           <p>
             {{ $t('AboutUs.content[0]') }}<br/><br/>
-            {{ $t('AboutUs.content[1]') }}
+            {{ $t('AboutUs.content[1]') }}<br/><br/>
+            {{ $t('AboutUs.content[2]') }}
           </p>
-          <ul>
-            <li>
-              <img src="../../../assets/img/rq.png" alt="" style="width:50px">
-              <h1>1987</h1>
-              <p>{{$t('ToggleList.aus[0]')}}</p>
-            </li>
-            <li>
-              <img src="../../../assets/img/zj.png" alt="" style="width:50px">
-              <h1>1,001.9{{$t('ToggleList.aus[3]')}}</h1>
-              <p>{{$t('ToggleList.aus[1]')}}</p>
-            </li>
-            <li>
-              <img src="../../../assets/img/gwb.png" alt="" style="width:50px">
-              <h1>999+</h1>
-              <p>{{$t('ToggleList.aus[2]')}}</p>
-            </li>
-          </ul>
+<!--          <ul>-->
+<!--            <li>-->
+<!--              <img src="../../../assets/img/rq.png" alt="" style="width:50px">-->
+<!--              <h1>1987</h1>-->
+<!--              <p>{{$t('ToggleList.aus[0]')}}</p>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <img src="../../../assets/img/zj.png" alt="" style="width:50px">-->
+<!--              <h1>1,001.9{{$t('ToggleList.aus[3]')}}</h1>-->
+<!--              <p>{{$t('ToggleList.aus[1]')}}</p>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <img src="../../../assets/img/gwb.png" alt="" style="width:50px">-->
+<!--              <h1>999+</h1>-->
+<!--              <p>{{$t('ToggleList.aus[2]')}}</p>-->
+<!--            </li>-->
+<!--          </ul>-->
           <div class="box">
             <div class="MoreBtn">→</div>
           </div>

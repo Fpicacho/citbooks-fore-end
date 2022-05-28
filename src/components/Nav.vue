@@ -1,11 +1,11 @@
 <template>
-    <div id="Nav">
+  <div id="Nav">
     <div class="logo">
       <router-link to="/">
-        <img src="../assets/img/logo.png" alt="">
+        <img src="../assets/img/logo.png" alt="" class="wow slideInLeft">
       </router-link>
     </div>
-    <div class="navList">
+    <div class="navList wow slideInRight">
       <n-dropdown trigger="click"
                   :options="options"
                   :show-arrow="true"
@@ -19,7 +19,7 @@
       </n-dropdown>
       <ChangeLanguageBtn style="margin-left: 10px" @click="ChangeLanguage"/>
     </div>
-    <div class="pc-navList">
+    <div class="pc-navList wow slideInRight">
       <n-menu mode="horizontal" :options="options" @update:value="handleSelect"/>
       <ChangeLanguageBtn @click="ChangeLanguage"/>
     </div>
@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import {ref,reactive} from "vue";
+import {ref, reactive} from "vue";
 import {NMenu} from "naive-ui";
 import ChangeLanguageBtn from "@/components/ChangeLanguageBtn"
 import {List as CashIcon} from '@vicons/ionicons5'
@@ -36,12 +36,12 @@ const language = ref('cn')
 
 const options = reactive([
   {
-    label:"关于我们",
+    label: "关于我们",
     key: "AboutUs",
-    children:[
+    children: [
       {
-        label:"公司简介",
-        key:"about"
+        label: "公司简介",
+        key: "about"
       },
       {
         label: "组织结构",
@@ -52,12 +52,12 @@ const options = reactive([
       }, {
         label: "公司文化",
         key: "CompanyCulture",
-      },{
-        label:"党建和社会责任",
-        key:"responsibility"
-      },{
-        label:"招聘信息",
-        key:"jobOffers"
+      }, {
+        label: "党建和社会责任",
+        key: "responsibility"
+      }, {
+        label: "招聘信息",
+        key: "jobOffers"
       }
     ]
   }, {
@@ -76,7 +76,7 @@ const options = reactive([
       label: "出口业务",
       key: "ExportBusiness",
     }]
-  },{
+  }, {
     label: "新闻动态",
     key: "news",
     children: [{
@@ -105,14 +105,14 @@ const options = reactive([
   }
 ])
 
-function handleSelect(key){
+function handleSelect(key) {
   // 准备进行跳转逻辑
   console.log(key)
 }
 
 
-function ChangeLanguage(){
-  if(language.value === 'cn'){
+function ChangeLanguage() {
+  if (language.value === 'cn') {
     language.value = 'en'
     options[0].label = 'AboutUs'
     options[0].children[0].label = 'Company Profile'
@@ -134,7 +134,7 @@ function ChangeLanguage(){
     options[3].children[0].label = 'BookFairServices'
     options[3].children[1].label = 'DataProcessing'
     options[3].children[2].label = 'ProfessionalStudies'
-  }else{
+  } else {
     language.value = 'cn'
     options[0].label = '关于我们'
     options[0].children[0].label = '公司简介'
@@ -170,39 +170,40 @@ function ChangeLanguage(){
   padding: 16px;
   border-bottom: 1px solid #efeff5;
 }
+
 @media only screen and (max-width: 449px) {
-  .navList{
+  .navList {
     display: flex;
   }
-  .pc-navList{
+  .pc-navList {
     display: none;
   }
-  .logo{
-    img{
+  .logo {
+    img {
       width: 150px;
     }
   }
 }
 
 @media only screen and (min-width: 374px) and (max-width: 769px) {
-  .navList{
+  .navList {
     display: flex;
   }
-  .pc-navList{
+  .pc-navList {
     display: none;
   }
-  .logo{
-    img{
+  .logo {
+    img {
       width: 150px;
     }
   }
 }
 
 @media only screen and (min-width: 770px) {
-  .navList{
+  .navList {
     display: none;
   }
-  .pc-navList{
+  .pc-navList {
     display: flex;
     align-items: center;
   }

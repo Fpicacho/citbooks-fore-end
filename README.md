@@ -1,19 +1,21 @@
 # citbooks-fore-end
 
-## Project setup
+## 初始化依赖库
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 启动开发时热更新服务器
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 静态资源打包
 ```
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 更多的自定义配置
+移步至 [Configuration Reference](https://cli.vuejs.org/config/).
+
+ By: [F_picacho](https://picachochina.github.io/)

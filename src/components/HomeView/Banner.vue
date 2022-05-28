@@ -1,5 +1,5 @@
 <template>
-  <div id="Banner">
+  <div id="Banner" class="wow fadeIn">
     <n-carousel autoplay draggable show-arrow>
       <img
           v-for="(item,index) in BannerList"
@@ -16,10 +16,10 @@
 import {ref} from "vue";
 
 const BannerList = ref([
-  'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg',
-  'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg',
-  'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg',
-  'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg'
+  'http://218.94.19.14:8800/ctibooksystem//attachement_files/出版社活动图a4fcfae9-71a0-416d-9296-1c9f6b8118d6_thumb.jpg',
+  'http://218.94.19.14:8800/ctibooksystem//attachement_files/publisher21e2bafae5-bcb8-4b4d-b20d-69333ac376bf_thumb.jpg',
+  'http://218.94.19.14:8800/ctibooksystem//attachement_files/北京书展图片13fe67daa-f7e6-4306-8160-810fa0b5d406_thumb.png',
+    'http://218.94.19.14:8800/ctibooksystem//attachement_files/印尼图片3b9409d48-8f51-4aa4-aa0e-9cff545c6b79_thumb.png'
 ])
 </script>
 

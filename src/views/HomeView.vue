@@ -3,7 +3,6 @@
     <Banner/>
     <BusinessList/>
     <NewsList/>
-<!--    <div class="clear"/>-->
     <ToggleList/>
   </div>
 </template>
@@ -18,17 +17,6 @@
 @media only screen and (min-width: 770px)  {
   .home{
     background: #f2f3f4;
-  }
-  //#NewsList{
-  //  position: absolute;
-  //  top: 760px;
-  //  left: 50%;
-  //  width: 80%;
-  //  transform: translate(-50%, -50%);
-  //}
-  .clear{
-    display: block;
-    height: 220px;
   }
 }
 </style>
