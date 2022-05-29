@@ -67,7 +67,7 @@ p,h1{
   margin-top: 30px;
   border-top: 1px solid rgb(239, 239, 245);
   //color: #fff;
-  color: #2d2c2c;
+  color: #4c4c4c;
   .linkNav{
     display: flex;
     justify-content: space-around;
@@ -76,11 +76,13 @@ p,h1{
     .linkNavList{
       h1{
         font-size: 20px;
+        color: #4c4c4c;
         border-bottom: 2px solid #007bff;
+        font-weight: 100;
       }
       a{
         margin-top:10px;
-        color: #333;
+        color: #999999;
         font-size: 14px;
         text-decoration: none;
         display: block;
@@ -107,6 +109,18 @@ p,h1{
         font-size: 16px;
         //color: #fff;
         margin:20px 0;
+      }
+    }
+  }
+  .qrcodeBox{
+    img{
+      width: 100px;
+      height: 100px;
+      transition: all .3s;
+      &:hover{
+        width: 200px;
+        height: 200px;
+        transition: all .3s;
       }
     }
   }

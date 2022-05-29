@@ -24,7 +24,7 @@ module.exports = {
     "media coverage",
     "Corporate Information",
     "Corporate News",
-    "about us",
+    "Special service",
     "Book Fair Services",
     "data price",
     "Professional Studies",

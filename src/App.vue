@@ -4,8 +4,10 @@
   <!--路由出口-->
   <router-view/>
   <!--全局页脚&版权信息-->
-  <Footer/>
-  <Copyright/>
+  <div class="fooferBox">
+    <Footer/>
+    <Copyright/>
+  </div>
 </template>
 
 <style lang="scss">

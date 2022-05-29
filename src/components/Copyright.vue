@@ -1,6 +1,6 @@
 <template>
   <!--版权页脚 src/components/Copyright.vue-->
-  <div id="Copyright" class="wow slideInUp">
+  <div id="Copyright">
     <div class="container">
       <p>{{$t('Copyright[0]')}}</p>
       <p>{{$t('Copyright[1]')}}</p>

@@ -28,11 +28,13 @@
 
 <script setup>
 import {ref, reactive} from "vue";
-import {NMenu} from "naive-ui";
+import {useRouter} from "vue-router"
 import ChangeLanguageBtn from "@/components/ChangeLanguageBtn"
 import {List as CashIcon} from '@vicons/ionicons5'
 
 const language = ref('cn')
+
+const router = useRouter();
 
 const options = reactive([
   {
@@ -41,7 +43,7 @@ const options = reactive([
     children: [
       {
         label: "公司简介",
-        key: "about"
+        key: "introduction"
       },
       {
         label: "组织结构",
@@ -106,8 +108,7 @@ const options = reactive([
 ])
 
 function handleSelect(key) {
-  // 准备进行跳转逻辑
-  console.log(key)
+  router.push({name:key})
 }
 
 
@@ -170,7 +171,15 @@ function ChangeLanguage() {
   padding: 16px;
   border-bottom: 1px solid #efeff5;
 }
-
+@media only screen and (max-width: 374px) {
+  #Nav{
+    .logo{
+      img{
+        width: 100px;
+      }
+    }
+  }
+}
 @media only screen and (max-width: 449px) {
   .navList {
     display: flex;
@@ -178,9 +187,11 @@ function ChangeLanguage() {
   .pc-navList {
     display: none;
   }
-  .logo {
-    img {
-      width: 150px;
+  #Nav{
+    .logo{
+      img{
+        width: 200px;
+      }
     }
   }
 }
@@ -192,9 +203,11 @@ function ChangeLanguage() {
   .pc-navList {
     display: none;
   }
-  .logo {
-    img {
-      width: 150px;
+  #Nav{
+    .logo{
+      img{
+        width: 200px;
+      }
     }
   }
 }
@@ -206,6 +219,13 @@ function ChangeLanguage() {
   .pc-navList {
     display: flex;
     align-items: center;
+  }
+  #Nav{
+    .logo{
+      img{
+        width: 300px;
+      }
+    }
   }
 }
 </style>
