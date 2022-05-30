@@ -3,7 +3,8 @@
     <div class="runBanner">
       <img :src="data.url" alt="">
       <div class="textBox">
-        <h1 class="wow bounceInLeft">{{ data.title }}</h1>
+        <h1 class="wow bounceInLeft">{{ data.title.cn }}</h1>
+        <p class="wow bounceInRight">{{ data.title.en }}</p>
       </div>
     </div>
   </div>
@@ -20,6 +21,10 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
+*{
+  margin: 0;
+  padding: 0;
+}
 @-webkit-keyframes scale_b {
   0% {
     -webkit-transform: scale(1);

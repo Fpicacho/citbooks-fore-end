@@ -1,24 +1,22 @@
 <template>
   <!--切换语言按钮 src/components/ChangeLanguageBtn.vue-->
   <div id="ChangeLanguageBtn" @click="changeLanguage">
-    <NButton v-if="state.curLanguage === 'cn'">English</NButton>
+    <NButton v-if="store.state.LanguageState === 'cn'">English</NButton>
     <NButton v-else>中文</NButton>
   </div>
 </template>
 
 <script setup>
-import {reactive} from 'vue'
+import {useStore} from 'vuex'
 import {useI18n} from 'vue-i18n'
 import { NButton } from 'naive-ui'
 const {locale} = useI18n()
 
-const state = reactive({
-  curLanguage: 'cn',
-})
+const store = useStore()
 
-const changeLanguage = () => {
-  state.curLanguage = state.curLanguage === 'cn' ? 'en' : 'cn'
-  locale.value = state.curLanguage
+const changeLanguage = function (){
+  store.commit('ChangeLanguageState')
+  locale.value = store.state.LanguageState
 }
 </script>
 

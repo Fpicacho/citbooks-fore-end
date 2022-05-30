@@ -5,7 +5,12 @@ export default createStore({
     LanguageState: "cn",
   },
   getters: {},
-  mutations: {},
+  mutations: {
+    ChangeLanguageState(state) {
+      state.LanguageState = state.LanguageState === "cn" ? "en" : "cn";
+      // console.log(1111);
+    },
+  },
   actions: {},
   modules: {},
 });
