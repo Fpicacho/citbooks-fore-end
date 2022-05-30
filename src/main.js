@@ -5,7 +5,10 @@ import store from "./store";
 import naive from "naive-ui";
 import animated from "animate.css/animate.css";
 import VueI18n from "./language";
-// import "default-passive-events";
+
+router.afterEach(() => {
+  window.scrollTo(0, 0);
+});
 
 createApp(App)
   .use(store)

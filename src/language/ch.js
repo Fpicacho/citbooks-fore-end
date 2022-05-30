@@ -78,4 +78,6 @@ module.exports = {
     bar: ["关于我们", "合作伙伴", "党建和社会责任"],
     aus: ["成立于", "注册资本", "服务对象", "万"],
   },
+  // 公司简介正文 introduction
+  introduction: {},
 };

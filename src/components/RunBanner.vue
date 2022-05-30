@@ -1,7 +1,7 @@
 <template>
   <div id="RunBanner" class="wow fadeIn">
     <div class="runBanner">
-      <img :src="data.url" alt="">
+      <img :src="data.imgUrl" alt="">
       <div class="textBox">
         <h1 class="wow bounceInLeft">{{ data.title.cn }}</h1>
         <p class="wow bounceInRight">{{ data.title.en }}</p>

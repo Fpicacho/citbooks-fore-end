@@ -13,7 +13,6 @@ import { NButton } from 'naive-ui'
 const {locale} = useI18n()
 
 const store = useStore()
-
 const changeLanguage = function (){
   store.commit('ChangeLanguageState')
   locale.value = store.state.LanguageState

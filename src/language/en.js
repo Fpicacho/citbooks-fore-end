@@ -1,5 +1,5 @@
 module.exports = {
-  // 全局页脚
+  // 全局版权
   Copyright: [
     "Copyright © China National Science and Technology Materials Import and Export Corporation",
     "Beijing ICP No.: 06062204",
@@ -41,6 +41,7 @@ module.exports = {
     video: "Promotional video",
     seeMore: "See more",
   },
+  // 首页业务列表
   BusinessList: {
     LearnMore: "LearnMore",
     Importoforiginalbooks: "Importoforiginalbooks",
@@ -59,6 +60,7 @@ module.exports = {
     BookFairServicesMS:
       "In the autumn of Renxu, in the seventh month of the month, Su Zi and the guest were paddling under the red cliffs. The breeze is coming, and the water waves are not happy. Wine is a guest, recite the poem of the bright moon, and sing the chapter of slenderness.",
   },
+  // 首页关于我们
   AboutUs: {
     title: "AboutUs",
     content: [
@@ -67,6 +69,7 @@ module.exports = {
       "Through years of operation, our company has established cooperative relations or business contacts with nearly 1,000 well-known publishing groups or publishing houses around the world, maintaining good business relations and becoming one of the largest agents in mainland China. Our company strives to expand the procurement channels for books in small languages, out-of-print or long-published books, especially opening up the procurement channels for books in Southeast Asia, which improves the difficulty of purchasing books in this region in the past and improves customer satisfaction. The overall booking rate of original foreign language books ranks among the best in the industry.",
     ],
   },
+  // 首页标签开关
   ToggleList: {
     title: [
       "Work together for a win-win situation and build a new era of library collections with global partners.",
@@ -76,4 +79,5 @@ module.exports = {
     bar: ["About us", "Partner", "socialResponsibility"],
     aus: ["Was founded in", "Registered capital", "Service object", "M"],
   },
+  // 公司简介正文 introduction
 };

@@ -12,25 +12,10 @@
             {{ $t('AboutUs.content[1]') }}<br/><br/>
             {{ $t('AboutUs.content[2]') }}
           </p>
-<!--          <ul>-->
-<!--            <li>-->
-<!--              <img src="../../../assets/img/rq.png" alt="" style="width:50px">-->
-<!--              <h1>1987</h1>-->
-<!--              <p>{{$t('ToggleList.aus[0]')}}</p>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <img src="../../../assets/img/zj.png" alt="" style="width:50px">-->
-<!--              <h1>1,001.9{{$t('ToggleList.aus[3]')}}</h1>-->
-<!--              <p>{{$t('ToggleList.aus[1]')}}</p>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <img src="../../../assets/img/gwb.png" alt="" style="width:50px">-->
-<!--              <h1>999+</h1>-->
-<!--              <p>{{$t('ToggleList.aus[2]')}}</p>-->
-<!--            </li>-->
-<!--          </ul>-->
           <div class="box">
-            <div class="MoreBtn">→</div>
+            <router-link to="/introduction">
+              <div class="MoreBtn">→</div>
+            </router-link>
           </div>
         </div>
       </div>
@@ -47,7 +32,9 @@ export default {
 <style scoped lang="scss">
 #AboutUs {
   color: #343d4c;
-
+  a{
+    text-decoration: none;
+  }
   .titleBox {
     text-align: center;
 

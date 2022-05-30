@@ -2,13 +2,12 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    LanguageState: "cn",
+    LanguageState: "ch",
   },
   getters: {},
   mutations: {
     ChangeLanguageState(state) {
-      state.LanguageState = state.LanguageState === "cn" ? "en" : "cn";
-      // console.log(1111);
+      state.LanguageState = state.LanguageState === "ch" ? "en" : "ch";
     },
   },
   actions: {},
