@@ -1,5 +1,5 @@
 <template>
-  <!--组织结构 src/views/IntroductionView.vue-->
+  <!--公司简介 src/views/IntroductionView.vue-->
   <div id="Introduction">
     <RunBanner :data="RunBannerData"/>
     <div class="container">

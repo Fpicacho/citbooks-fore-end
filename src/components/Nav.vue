@@ -47,7 +47,7 @@ const options = reactive([
       },
       {
         label: "组织结构",
-        key: "OrganizationalStructure",
+        key: "organize",
       }, {
         label: "合作伙伴",
         key: "Partner",
