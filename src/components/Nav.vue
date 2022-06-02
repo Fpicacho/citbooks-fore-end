@@ -53,7 +53,7 @@ const options = reactive([
         key: "Cooperate",
       }, {
         label: "公司文化",
-        key: "CompanyCulture",
+        key: "Culture",
       }, {
         label: "党建和社会责任",
         key: "responsibility"

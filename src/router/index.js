@@ -26,6 +26,12 @@ const routes = [
     component: () => import("../views/Cooperate"),
   },
   {
+    // 公司文化
+    path: "/culture",
+    name: "Culture",
+    component: () => import("../views/Culture"),
+  },
+  {
     // 404
     path: "/404",
     name: "404",

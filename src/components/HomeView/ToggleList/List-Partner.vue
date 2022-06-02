@@ -6,6 +6,11 @@
       <p>{{item.describe}}</p>
     </li>
   </ul>
+  <div style="text-align: center">
+    <n-button strong secondary type="primary" style="width:50%">
+      查看更多
+    </n-button>
+  </div>
 </div>
 </template>
 
@@ -19,6 +24,7 @@ let serveData = [
   {id:6,img:'https://img2.baidu.com/it/u=2416572543,1181469736&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=157',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
   {id:7,img:'https://img2.baidu.com/it/u=2738327552,2106498984&fm=253&fmt=auto&app=138&f=JPEG?w=775&h=500',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
   {id:8,img:'https://www.firefox.com.cn/media/protocol/img/logos/firefox/browser/logo-lg-high-res.fbc7ffbb50fd.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
+
 ]
 </script>
 

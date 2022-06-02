@@ -1,5 +1,5 @@
 <template>
-<div id="BreadNavigation">
+<div id="BreadNavigation" class="wow fadeIn">
 <!--  面包导航-->
   <div class="titleBox">
     <h1>{{componentsData.title}}</h1>
@@ -20,18 +20,9 @@ import {useStore} from 'vuex'
 const store = useStore()
 const props = defineProps(['data'])
 const componentsData = reactive({
-  title:"title",
-  navigation:[
-    {
-      link:"/",
-      title:"关于我们",
-    },
-    {
-      link:"/cooperate",
-      title:"合作伙伴",
-    },
-  ],
-  describe:"describe"
+  title:"",
+  navigation:[],
+  describe:""
 })
 
 const getLanguageState = computed(() => {
@@ -77,6 +68,18 @@ watch(getLanguageState, (newVal) => {
   .describe{
     font-size: 16px;
     color: #666;
+  }
+}
+@media only screen and (max-width: 770px){
+  #BreadNavigation{
+    margin-top: 20px;
+    .titleBox{
+      display: flex;
+      justify-content: end;
+      h1{
+        display: none;
+      }
+    }
   }
 }
 </style>
