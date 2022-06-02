@@ -80,4 +80,7 @@ module.exports = {
     aus: ["Was founded in", "Registered capital", "Service object", "M"],
   },
   // 公司简介正文 introduction
+  introduction: {},
+  // 面包组件
+  currentPosition: "CurrentPosition:",
 };

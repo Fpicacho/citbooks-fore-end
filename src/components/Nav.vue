@@ -50,7 +50,7 @@ const options = reactive([
         key: "organize",
       }, {
         label: "合作伙伴",
-        key: "Partner",
+        key: "Cooperate",
       }, {
         label: "公司文化",
         key: "CompanyCulture",

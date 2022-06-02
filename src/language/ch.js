@@ -80,4 +80,6 @@ module.exports = {
   },
   // 公司简介正文 introduction
   introduction: {},
+  // 面包组件
+  currentPosition: "当前位置:",
 };

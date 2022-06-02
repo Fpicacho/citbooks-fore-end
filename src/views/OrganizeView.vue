@@ -3,7 +3,7 @@
     <RunBanner :data="RunBannerData"/>
     <div class="container">
       <div class="table-wrap nobd">
-        <table cellpadding="0" cellspacing="0" class="cnt_lst_table_lr" width="100%">
+        <table cellpadding="0" cellspacing="0" class="cnt_lst_table_lr wow slideInLeft" width="100%">
           <tbody>
           <tr>
             <th colspan="2" class="green">中国科技资料进出口总公司</th>
@@ -35,7 +35,7 @@
           </tbody>
         </table>
         <div class="bk10"></div>
-        <table cellpadding="0" cellspacing="0" class="cnt_lst_table_lr" width="100%">
+        <table cellpadding="0" cellspacing="0" class="cnt_lst_table_lr wow slideInRight" width="100%">
           <tbody>
           <tr>
             <th colspan="2" class="green">客服部</th>
@@ -55,7 +55,7 @@
           </tbody>
         </table>
         <div class="bk10"></div>
-        <table cellpadding="0" cellspacing="0" class="cnt_lst_table_lr" width="100%">
+        <table cellpadding="0" cellspacing="0" class="cnt_lst_table_lr wow slideInLeft" width="100%">
           <tbody>
           <tr>
             <th colspan="2" class="green">销售部</th>
@@ -97,7 +97,7 @@ const RunBannerData = {
 <style scoped lang="scss">
 .container {
   width: 75%;
-  margin: 10px auto;
+  margin: 50px auto;
 
   .green {
     text-align: left;

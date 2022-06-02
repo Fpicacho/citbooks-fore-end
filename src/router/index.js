@@ -20,6 +20,12 @@ const routes = [
     component: () => import("../views/OrganizeView"),
   },
   {
+    // 合作伙伴
+    path: "/cooperate",
+    name: "Cooperate",
+    component: () => import("../views/Cooperate"),
+  },
+  {
     // 404
     path: "/404",
     name: "404",
