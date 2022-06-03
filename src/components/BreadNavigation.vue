@@ -37,7 +37,6 @@ function changeLanguage(val){
     })
     componentsData.navigation = list
     componentsData.describe = props.data.describe.cn
-
   }else{
     componentsData.title = props.data.title.en
     let list = [];

@@ -1,5 +1,6 @@
 <template>
   <div id="Organize">
+    <!--组织结构-->
     <RunBanner :data="RunBannerData"/>
     <div class="container">
       <div class="table-wrap nobd">

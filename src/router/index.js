@@ -32,6 +32,18 @@ const routes = [
     component: () => import("../views/Culture"),
   },
   {
+    // 党建责任
+    path: "/responsibility",
+    name: "Responsibility",
+    component: () => import("../views/Responsibility"),
+  },
+  {
+    // 招聘信息
+    path: "/recruitment",
+    name: "Recruitment",
+    component: () => import("../views/Recruitment"),
+  },
+  {
     // 404
     path: "/404",
     name: "404",

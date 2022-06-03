@@ -56,10 +56,10 @@ const options = reactive([
         key: "Culture",
       }, {
         label: "党建和社会责任",
-        key: "responsibility"
+        key: "Responsibility"
       }, {
         label: "招聘信息",
-        key: "jobOffers"
+        key: "Recruitment"
       }
     ]
   }, {
