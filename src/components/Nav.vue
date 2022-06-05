@@ -67,13 +67,13 @@ const options = reactive([
     key: "Business",
     children: [{
       label: "原版图书进口",
-      key: "ImportOfOriginalBooks",
+      key: "BookImport",
     }, {
       label: "电子资源进口",
-      key: "ImportOfElectronicResources",
+      key: "ElectronicImport",
     }, {
       label: "报刊进口",
-      key: "NewspaperImport",
+      key: "NewsImport",
     }, {
       label: "出口业务",
       key: "ExportBusiness",

@@ -5,7 +5,7 @@ const routes = [
     // 首页
     path: "/",
     name: "home",
-    component: import("../views/HomeView.vue"),
+    component: () => import("../views/HomeView.vue"),
   },
   {
     // 关于我们
@@ -42,6 +42,48 @@ const routes = [
     path: "/recruitment",
     name: "Recruitment",
     component: () => import("../views/Recruitment"),
+  },
+  {
+    // 原版图书进口
+    path: "/bookImport",
+    name: "BookImport",
+    component: () => import("../views/BookImport"),
+  },
+  {
+    // 电子资源进口
+    path: "/electronicImport",
+    name: "ElectronicImport",
+    component: () => import("../views/ElectronicImport"),
+  },
+  {
+    // 报刊进口
+    path: "/newsImport",
+    name: "NewsImport",
+    component: () => import("../views/NewsImport"),
+  },
+  {
+    // 出口业务
+    path: "/exportBusiness",
+    name: "ExportBusiness",
+    component: () => import("../views/ExportBusiness"),
+  },
+  {
+    // 书展服务
+    path: "/bookFairServices",
+    name: "BookFairServices",
+    component: () => import("../views/BookFairServices"),
+  },
+  {
+    // 数据加工
+    path: "/dataProcessing",
+    name: "DataProcessing",
+    component: () => import("../views/DataProcessing"),
+  },
+  {
+    // 专业研究
+    path: "/professionalStudies",
+    name: "ProfessionalStudies",
+    component: () => import("../views/ProfessionalStudies"),
   },
   {
     // 404
