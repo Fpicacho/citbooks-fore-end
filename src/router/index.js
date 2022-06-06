@@ -86,6 +86,18 @@ const routes = [
     component: () => import("../views/ProfessionalStudies"),
   },
   {
+    // 媒体报道列表
+    path: "/mediaList",
+    name: "MediaList",
+    component: () => import("../views/MediaList"),
+  },
+  {
+    // 文章详情
+    path: "/articleDetails",
+    name: "ArticleDetails",
+    component: () => import("../views/ArticleDetails"),
+  },
+  {
     // 404
     path: "/404",
     name: "404",

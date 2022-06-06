@@ -83,7 +83,7 @@ const options = reactive([
     key: "news",
     children: [{
       label: "媒体报道",
-      key: "MediaCoverage",
+      key: "MediaList",
     }, {
       label: "行业资讯",
       key: "IndustryInformation",
