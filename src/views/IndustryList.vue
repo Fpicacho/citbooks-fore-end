@@ -1,6 +1,6 @@
 <template>
-  <div id="ElectronicImport">
-    <!--媒体报道列表-->
+  <div id="IndustryList">
+    <!--  行业资讯列表-->
     <RunBanner :data="RunBannerData"/>
     <div class="container">
       <BreadNavigation :data="BreadNavigationData"/>
@@ -37,14 +37,14 @@ import BreadNavigation from '@/components/BreadNavigation';
 const RunBannerData = {
   imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
   title: {
-    cn: '媒体资讯',
-    en: 'MediaInformation'
+    cn: '行业资讯',
+    en: 'IndustryInformation'
   }
 }
 const BreadNavigationData = {
   title: {
-    cn: "媒体资讯",
-    en: "MediaInformation"
+    cn: "行业资讯",
+    en: "IndustryInformation"
   },
   navigation: [
     {
@@ -53,9 +53,9 @@ const BreadNavigationData = {
       en: "EntrepriseNews"
     },
     {
-      link: "/mediaList",
-      cn: "媒体资讯",
-      en: "Media"
+      link: "/industryInformation",
+      cn: "行业资讯",
+      en: "Industry"
     },
   ],
   describe: {
@@ -138,7 +138,7 @@ function jump(id) {
   margin: 20px auto;
 }
 
-#ElectronicImport {
+#IndustryList {
   .list {
     * {
       margin: 0;
@@ -215,7 +215,7 @@ function jump(id) {
 }
 
 @media only screen and (min-width: 374px) and (max-width: 769px) {
-  #ElectronicImport {
+  #IndustryList {
     .list {
       li {
         padding: 10px 0;

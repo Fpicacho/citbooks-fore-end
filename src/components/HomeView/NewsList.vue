@@ -5,7 +5,7 @@
         <li class="listBox">
           <div class="l">
             <div class="title">📰 {{$t('HomeNewsList.news')}}</div>
-            <span class="cursor">{{$t('HomeNewsList.seeMore')}} >></span>
+            <span class="cursor" @click="jump('enterpriseList')">{{$t('HomeNewsList.seeMore')}} >></span>
           </div>
           <ul class="r">
             <li v-for="item in newsList" :key="item.id" class="cursor">
@@ -18,7 +18,7 @@
         <li class="listBox">
           <div class="l">
             <div class="icon">📖 {{$t('HomeNewsList.bookFair')}}</div>
-            <span class="cursor">{{$t('HomeNewsList.seeMore')}} >></span>
+            <span class="cursor" @click="jump('industryList')">{{$t('HomeNewsList.seeMore')}} >></span>
           </div>
           <ul class="r">
             <li v-for="item in booxList" :id="item.id" class="cursor">
@@ -43,6 +43,12 @@
 
 <script setup>
 import {ref} from 'vue'
+import {useRouter} from 'vue-router'
+const router = useRouter();
+
+function jump(id) {
+  router.push(id)
+}
 
 const newsList = ref([
   {

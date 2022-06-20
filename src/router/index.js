@@ -86,7 +86,19 @@ const routes = [
     component: () => import("../views/ProfessionalStudies"),
   },
   {
-    // 媒体报道列表
+    // 媒体资讯列表
+    path: "/enterpriseList",
+    name: "EnterpriseList",
+    component: () => import("../views/EnterpriseList"),
+  },
+  {
+    //行业资讯列表
+    path: "/industryList",
+    name: "IndustryList",
+    component: () => import("../views/IndustryList"),
+  },
+  {
+    //媒体资讯列表
     path: "/mediaList",
     name: "MediaList",
     component: () => import("../views/MediaList"),

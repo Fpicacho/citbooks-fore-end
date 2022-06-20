@@ -79,17 +79,17 @@ const options = reactive([
       key: "ExportBusiness",
     }]
   }, {
-    label: "新闻动态",
+    label: "企业动态",
     key: "news",
     children: [{
-      label: "媒体报道",
-      key: "MediaList",
+      label: "企业动态",
+      key: "EnterpriseList",
     }, {
       label: "行业资讯",
-      key: "IndustryInformation",
+      key: "IndustryList",
     }, {
-      label: "企业新闻",
-      key: "CorporateNews",
+      label: "媒体资讯",
+      key: "MediaList",
     }]
   }, {
     label: "特色服务",
@@ -128,9 +128,9 @@ function ChangeLanguage() {
     options[1].children[2].label = 'NewspaperImport'
     options[1].children[3].label = 'ExportBusiness'
     options[2].label = 'News'
-    options[2].children[0].label = 'MediaCoverage'
+    options[2].children[0].label = 'EntrepriseNews'
     options[2].children[1].label = 'IndustryInformation'
-    options[2].children[2].label = 'CorporateNews'
+    options[2].children[2].label = 'MediaInformation'
     options[3].label = 'SpecialFunction'
     options[3].children[0].label = 'BookFairServices'
     options[3].children[1].label = 'DataProcessing'
@@ -149,10 +149,10 @@ function ChangeLanguage() {
     options[1].children[1].label = '电子资源进口'
     options[1].children[2].label = '报刊进口'
     options[1].children[3].label = '出口业务'
-    options[2].label = '新闻动态'
-    options[2].children[0].label = '媒体报道'
+    options[2].label = '企业动态'
+    options[2].children[0].label = '企业动态'
     options[2].children[1].label = '行业资讯'
-    options[2].children[2].label = '企业新闻'
+    options[2].children[2].label = '媒体资讯'
     options[3].label = '特色服务'
     options[3].children[0].label = '书展服务'
     options[3].children[1].label = '数据加工'

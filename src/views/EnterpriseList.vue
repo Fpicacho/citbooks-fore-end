@@ -1,6 +1,6 @@
 <template>
   <div id="ElectronicImport">
-    <!--媒体报道列表-->
+    <!--  媒体报道列表-->
     <RunBanner :data="RunBannerData"/>
     <div class="container">
       <BreadNavigation :data="BreadNavigationData"/>
@@ -37,14 +37,14 @@ import BreadNavigation from '@/components/BreadNavigation';
 const RunBannerData = {
   imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
   title: {
-    cn: '媒体资讯',
-    en: 'MediaInformation'
+    cn: '企业动态',
+    en: 'Entreprise News'
   }
 }
 const BreadNavigationData = {
   title: {
-    cn: "媒体资讯",
-    en: "MediaInformation"
+    cn: "企业动态",
+    en: "Entreprise News"
   },
   navigation: [
     {
@@ -53,9 +53,9 @@ const BreadNavigationData = {
       en: "EntrepriseNews"
     },
     {
-      link: "/mediaList",
-      cn: "媒体资讯",
-      en: "Media"
+      link: "/electronicImport",
+      cn: "企业动态",
+      en: "Electronic"
     },
   ],
   describe: {

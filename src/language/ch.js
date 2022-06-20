@@ -36,8 +36,8 @@ module.exports = {
   ],
   // 首页新闻列表
   HomeNewsList: {
-    news: "新闻列表",
-    bookFair: "书展资讯",
+    news: "企业动态",
+    bookFair: "行业资讯",
     video: "宣传视频",
     seeMore: "查看更多",
   },
