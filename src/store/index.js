@@ -8,6 +8,7 @@ export default createStore({
   mutations: {
     ChangeLanguageState(state) {
       state.LanguageState = state.LanguageState === "ch" ? "en" : "ch";
+      window.localStorage.setItem("LanguageState", state.LanguageState);
     },
   },
   actions: {},

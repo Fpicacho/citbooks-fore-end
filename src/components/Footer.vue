@@ -6,33 +6,33 @@
       <ul class="linkNav wow bounceInLeft">
         <li class="linkNavList">
           <h1>{{$t('Footer[0]')}}</h1>
-          <router-link to="/">{{$t('Footer[1]')}}</router-link>
-          <router-link to="/">{{$t('Footer[2]')}}</router-link>
-          <router-link to="/">{{$t('Footer[3]')}}</router-link>
-          <router-link to="/">{{$t('Footer[4]')}}</router-link>
-          <router-link to="/">{{$t('Footer[5]')}}</router-link>
-          <router-link to="/">{{$t('Footer[6]')}}</router-link>
+          <router-link to="/introduction">{{$t('Footer[1]')}}</router-link>
+          <router-link to="/organize">{{$t('Footer[2]')}}</router-link>
+          <router-link to="/cooperate">{{$t('Footer[3]')}}</router-link>
+          <router-link to="/culture">{{$t('Footer[4]')}}</router-link>
+          <router-link to="/responsibility">{{$t('Footer[5]')}}</router-link>
+          <router-link to="/recruitment">{{$t('Footer[6]')}}</router-link>
         </li>
         <li class="linkNavList">
           <h1>{{$t('Footer[7]')}}</h1>
-          <router-link to="/">{{$t('Footer[8]')}}</router-link>
-          <router-link to="/">{{$t('Footer[9]')}}</router-link>
-          <router-link to="/">{{$t('Footer[10]')}}</router-link>
-          <router-link to="/">{{$t('Footer[11]')}}</router-link>
+          <router-link to="/bookImport">{{$t('Footer[8]')}}</router-link>
+          <router-link to="/electronicImport">{{$t('Footer[9]')}}</router-link>
+          <router-link to="/newsImport">{{$t('Footer[10]')}}</router-link>
+          <router-link to="/exportBusiness">{{$t('Footer[11]')}}</router-link>
         </li>
       </ul>
       <ul class="linkNav wow bounceInLeft">
         <li class="linkNavList">
           <h1>{{$t('Footer[12]')}}</h1>
-          <router-link to="/">{{$t('Footer[13]')}}</router-link>
-          <router-link to="/">{{$t('Footer[14]')}}</router-link>
-          <router-link to="/">{{$t('Footer[15]')}}</router-link>
+          <router-link to="/enterpriseList">{{$t('Footer[13]')}}</router-link>
+          <router-link to="/industryList">{{$t('Footer[14]')}}</router-link>
+          <router-link to="/mediaList">{{$t('Footer[15]')}}</router-link>
         </li>
         <li class="linkNavList">
           <h1>{{$t('Footer[16]')}}</h1>
-          <router-link to="/">{{$t('Footer[17]')}}</router-link>
-          <router-link to="/">{{$t('Footer[18]')}}</router-link>
-          <router-link to="/">{{$t('Footer[19]')}}</router-link>
+          <router-link to="/bookFairServices">{{$t('Footer[17]')}}</router-link>
+          <router-link to="/dataProcessing">{{$t('Footer[18]')}}</router-link>
+          <router-link to="/professionalStudies">{{$t('Footer[19]')}}</router-link>
         </li>
       </ul>
     </div>

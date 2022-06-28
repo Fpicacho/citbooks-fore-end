@@ -4,7 +4,13 @@
 
 <script setup>
 import { useRoute } from "vue-router";
+import { onMounted } from 'vue'
+import test from '../api/test'
 const route = useRoute();
+
+onMounted(() => {
+  test.test1({test:100})
+})
 </script>
 
 <style scoped>

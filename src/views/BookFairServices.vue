@@ -32,7 +32,7 @@ const BreadNavigationData = {
       en: "special service"
     },
     {
-      link: "/exportBusiness",
+      link: "/bookFairServices",
       cn: "书展服务",
       en: "Book Fair Services"
     },

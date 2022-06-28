@@ -53,7 +53,7 @@ const BreadNavigationData = {
       en: "EntrepriseNews"
     },
     {
-      link: "/electronicImport",
+      link: "/enterpriseList",
       cn: "企业动态",
       en: "Electronic"
     },

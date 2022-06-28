@@ -32,7 +32,7 @@ const BreadNavigationData = {
       en: "Business"
     },
     {
-      link: "/newspaperImport",
+      link: "/newsImport",
       cn: "报刊进口",
       en: "NewspaperImport"
     },

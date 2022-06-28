@@ -58,6 +58,7 @@ body {
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Copyright from '@/components/Copyright'
+import { onMounted } from 'vue'
 
 
 // 全局滚动动画方法基本配置
@@ -70,4 +71,8 @@ let wow = new WOW({
   live: true
 });
 wow.init();
+onMounted(() => {
+  window.localStorage.setItem("LanguageState", "ch");
+})
+
 </script>

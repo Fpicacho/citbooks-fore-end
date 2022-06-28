@@ -17,13 +17,13 @@ const RunBannerData = {
   imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
   title: {
     cn: '专业研究',
-    en: 'data processing'
+    en: 'Professional Studies'
   }
 }
 const BreadNavigationData = {
   title: {
     cn: "专业研究",
-    en: "data processing"
+    en: "Professional Studies"
   },
   navigation: [
     {
@@ -32,7 +32,7 @@ const BreadNavigationData = {
       en: "special service"
     },
     {
-      link: "/electronicImport",
+      link: "/professionalStudies",
       cn: "专业研究",
       en: "ElectronicImport"
     },

@@ -7,7 +7,7 @@
     </li>
   </ul>
   <div style="text-align: center">
-    <n-button strong secondary type="primary" style="width:50%">
+    <n-button strong secondary type="primary" style="width:50%" @click="jump('/cooperate')">
       查看更多
     </n-button>
   </div>
@@ -15,6 +15,9 @@
 </template>
 
 <script setup>
+import {useRouter} from 'vue-router'
+const router = useRouter();
+
 let serveData = [
   {id:1,img:'https://docs.alibabagroup.com/assets2/images/cn/global/logo_header.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
   {id:2,img:'https://www.tencent.com/img/index/tencent_logo.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
@@ -26,6 +29,10 @@ let serveData = [
   {id:8,img:'https://www.firefox.com.cn/media/protocol/img/logos/firefox/browser/logo-lg-high-res.fbc7ffbb50fd.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
 
 ]
+function jump(url) {
+  router.push({path: url})
+}
+
 </script>
 
 <style scoped lang="scss">
