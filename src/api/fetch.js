@@ -1,7 +1,7 @@
 import axios from "axios";
 import qs from "qs";
 let fetch = axios.create({
-  timeout: 50000,
+  timeout: 1000,
 });
 fetch.interceptors.request.use(
   function (config) {

@@ -9,7 +9,7 @@ import test from '../api/test'
 const route = useRoute();
 
 onMounted(() => {
-  test.test1({test:100})
+  test.test1({postId:1})
 })
 </script>
 
