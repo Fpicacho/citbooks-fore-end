@@ -1,27 +1,32 @@
 <template>
   <div id="IndustryList">
-    <!--  行业资讯列表-->
+    <!--  行业资讯-->
     <RunBanner :data="RunBannerData"/>
     <div class="container">
       <BreadNavigation :data="BreadNavigationData"/>
       <ul class="list">
-        <li v-for="item in serveData" :id="item.id" @click="jump(item.id)">
+        <li v-for="item in serveData.const" :id="item.id" @click="jump(item.id)">
           <div class="l">
-            <p class="year">{{ item.year }}</p>
-            <p class="date">{{ item.date }}</p>
+            <p class="year">{{ TimestampConversion(item.time, "year") }}</p>
+            <p class="date">{{ TimestampConversion(item.time, "date") }}</p>
             <span></span>
           </div>
           <div class="r">
             <h1 class="title">{{ item.title }}</h1>
-            <p class="m-day">{{ item.year }} / {{ item.date }}</p>
-            <p class="describe">{{ item.describe }}</p>
+            <p class="m-day">{{ TimestampConversion(item.time, "year") }} {{
+                TimestampConversion(item.time, "date")
+              }}</p>
+            <p class="describe">{{ item.introduction }}</p>
             <p class="more">查看更多+</p>
           </div>
         </li>
       </ul>
       <div style="text-align: center; margin-top:20px">
-        <n-button strong secondary type="primary" style="width:30%" @click="load">
+        <n-button strong secondary type="primary" style="width:30%" @click="load" v-if="isNull.const">
           加载更多
+        </n-button>
+        <n-button strong secondary type="primary" style="width:30%" @click="load" disabled v-else >
+          没有更多了
         </n-button>
       </div>
     </div>
@@ -29,22 +34,24 @@
 </template>
 
 <script setup>
-import {reactive} from 'vue'
+import {reactive, onMounted, watch, computed} from 'vue'
 import {useRouter} from 'vue-router'
 import RunBanner from '@/components/RunBanner'
 import BreadNavigation from '@/components/BreadNavigation';
+import allInterfaces from "@/api/allInterfaces";
+import {useStore} from 'vuex'
 
 const RunBannerData = {
   imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
   title: {
     cn: '行业资讯',
-    en: 'IndustryInformation'
+    en: 'Industry information'
   }
 }
 const BreadNavigationData = {
   title: {
-    cn: "行业资讯",
-    en: "IndustryInformation"
+    cn: '行业资讯',
+    en: 'Industry Information'
   },
   navigation: [
     {
@@ -63,74 +70,63 @@ const BreadNavigationData = {
     en: "Since the production and operation of an enterprise is closely related to the fulfillment of social responsibility, in order to ensure the healthy development of the enterprise, the party organization of the enterprise must also take the fulfillment of social responsibility as an important part of the party building of the enterprise, combined with the fulfillment of social responsibility and strengthen the party building work to ensure that the enterprise fulfills its social responsibility well"
   }
 }
-const serveData = reactive([
-  {
-    id: 1,
-    title: "北京冬奥会全面开赛，让我们一起为运动健儿加油！",
-    year: "2022",
-    date: "06-04",
-    describe: "冬季奥林匹克运动会简称冬奥会。是世界规模最大的冬季综合运动会，每四年举办一届。北京冬季奥运会设7个大项，15个分项，109个小项。"
-  },
-  {
-    id: 2,
-    title: "北京冬奥会全面开赛，让我们一起为运动健儿加油！",
-    year: "2022",
-    date: "06-04",
-    describe: "冬季奥林匹克运动会简称冬奥会。是世界规模最大的冬季综合运动会，每四年举办一届。北京冬季奥运会设7个大项，15个分项，109个小项。"
-  },
-  {
-    id: 3,
-    title: "北京冬奥会全面开赛，让我们一起为运动健儿加油！",
-    year: "2022",
-    date: "06-04",
-    describe: "冬季奥林匹克运动会简称冬奥会。是世界规模最大的冬季综合运动会，每四年举办一届。北京冬季奥运会设7个大项，15个分项，109个小项。"
-  },
-  {
-    id: 4,
-    title: "北京冬奥会全面开赛，让我们一起为运动健儿加油！",
-    year: "2022",
-    date: "06-04",
-    describe: "冬季奥林匹克运动会简称冬奥会。是世界规模最大的冬季综合运动会，每四年举办一届。北京冬季奥运会设7个大项，15个分项，109个小项。"
-  }
-])
+const serveData = reactive({const: []})
+const page = reactive({const: 1})
+const isNull = reactive({const: true})
 const router = useRouter();
+const store = useStore();
+
+onMounted(() => {
+  getEnterpriseList({page: page.const, limit: 5})
+})
 
 function load() {
-  const test = [{
-    id: 1,
-    title: "1231231000，让我们一起为运动健儿加油！",
-    year: "2088",
-    date: "06-04",
-    describe: "冬季奥林匹克运动会简称冬奥会。是世界规模最大的冬季综合运动会，每四年举办一届。北京冬季奥运会设7个大项，15个分项，109个小项。"
-  }, {
-    id: 1,
-    title: "1231231000，让我们一起为运动健儿加油！",
-    year: "2088",
-    date: "06-04",
-    describe: "冬季奥林匹克运动会简称冬奥会。是世界规模最大的冬季综合运动会，每四年举办一届。北京冬季奥运会设7个大项，15个分项，109个小项。"
-  }, {
-    id: 1,
-    title: "1231231000，让我们一起为运动健儿加油！",
-    year: "2088",
-    date: "06-04",
-    describe: "冬季奥林匹克运动会简称冬奥会。是世界规模最大的冬季综合运动会，每四年举办一届。北京冬季奥运会设7个大项，15个分项，109个小项。"
-  }, {
-    id: 1,
-    title: "1231231000，让我们一起为运动健儿加油！",
-    year: "2088",
-    date: "06-04",
-    describe: "冬季奥林匹克运动会简称冬奥会。是世界规模最大的冬季综合运动会，每四年举办一届。北京冬季奥运会设7个大项，15个分项，109个小项。"
-  }]
-  test.forEach(item => {
-    serveData.push(item)
-  })
+  page.const = page.const + 1
+  allInterfaces.industry({page: page.const, limit: 5}).then(res => {
+    if (res.data.data.length < 5) {
+      isNull.const = false
+      res.data.data.forEach(item => {
+        serveData.const.push(item)
+      })
+    }else{
+      res.data.data.forEach(item => {
+        serveData.const.push(item)
+      })
+    }
 
+  })
+}
+
+function getEnterpriseList(params) {
+  allInterfaces.industry(params).then(res => {
+    serveData.const = res.data.data
+  })
 }
 
 function jump(id) {
   router.push({path: '/articleDetails', query: {id}})
 }
+
+// 语言切换监听
+const getLanguageState = computed(() => {
+  return store.state.LanguageState;
+})
+watch(getLanguageState, (newVal) => {
+  // 发送newVal 以告知服务端需要什么版本的文章
+  getEnterpriseList({page: 1, limit:serveData.const.length })
+});
+// 语言切换监听end
+
+function TimestampConversion(time, type) {
+  const t = new Date(time * 1000)
+  if (type === 'year') {
+    return t.getFullYear()
+  } else {
+    return `${t.getMonth() + 1}/${t.getDate()}`
+  }
+}
 </script>
+
 
 <style scoped lang="scss">
 .container {
@@ -153,11 +149,13 @@ function jump(id) {
       cursor: pointer;
       transition: all .3s;
       margin-top: 20px;
-      .r{
-        .m-day{
+
+      .r {
+        .m-day {
           display: none;
         }
       }
+
       &:hover {
         background: #fbfbfb;
         transition: all .3s;
@@ -226,7 +224,8 @@ function jump(id) {
 
         .r {
           width: 100%;
-          .m-day{
+
+          .m-day {
             display: block;
             margin-top: 10px;
             font-size: 12px;

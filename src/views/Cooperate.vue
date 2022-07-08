@@ -6,7 +6,7 @@
     <BreadNavigation :data="BreadNavigationData"/>
     <div id="Partner">
       <ul>
-        <li v-for="item in serveData" :key="item.id" class="wow flip">
+        <li v-for="item in serveData.const" :key="item.id" class="wow flip">
           <img :src="item.img" alt="">
           <p>{{item.describe}}</p>
         </li>
@@ -17,8 +17,10 @@
 </template>
 
 <script setup>
+import {reactive, onMounted, watch, computed} from 'vue'
 import RunBanner from '@/components/RunBanner'
 import BreadNavigation from '@/components/BreadNavigation';
+import allInterfaces from "@/api/allInterfaces";
 const RunBannerData = {
   imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
   title: {
@@ -48,25 +50,14 @@ const BreadNavigationData={
     en:"With the continuous development of the company, the high-quality service of China National Science and Technology Materials Import and Export Corporation has been extended to a wider field. We have obtained cooperation from many enterprises in various industries. The following shows the LOGO of some partners (in no particular order):"
   }
 }
-let serveData = [
-  {id:1,img:'https://docs.alibabagroup.com/assets2/images/cn/global/logo_header.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:2,img:'https://www.tencent.com/img/index/tencent_logo.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:3,img:'https://pic2.zhimg.com/80/v2-f6b1f64a098b891b4ea1e3104b5b71f6_720w.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:4,img:'https:///www.baidu.com/img/flexible/logo/pc/result.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:5,img:'http://www.chinawanda.com/static/images/logo_style.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:6,img:'https://img2.baidu.com/it/u=2416572543,1181469736&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=157',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:7,img:'https://img2.baidu.com/it/u=2738327552,2106498984&fm=253&fmt=auto&app=138&f=JPEG?w=775&h=500',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:8,img:'https://www.firefox.com.cn/media/protocol/img/logos/firefox/browser/logo-lg-high-res.fbc7ffbb50fd.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:1,img:'https://docs.alibabagroup.com/assets2/images/cn/global/logo_header.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:2,img:'https://www.tencent.com/img/index/tencent_logo.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:3,img:'https://pic2.zhimg.com/80/v2-f6b1f64a098b891b4ea1e3104b5b71f6_720w.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:4,img:'https:///www.baidu.com/img/flexible/logo/pc/result.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:5,img:'http://www.chinawanda.com/static/images/logo_style.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:6,img:'https://img2.baidu.com/it/u=2416572543,1181469736&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=157',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:7,img:'https://img2.baidu.com/it/u=2738327552,2106498984&fm=253&fmt=auto&app=138&f=JPEG?w=775&h=500',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-  {id:8,img:'https://www.firefox.com.cn/media/protocol/img/logos/firefox/browser/logo-lg-high-res.fbc7ffbb50fd.png',describe:'北冥有鱼，其名为鲲。鲲之大，不知其几千里也；化而为鸟，其名为鹏。鹏之背，不知其几千里也'},
-]
-
+const serveData = reactive({
+  const: []
+})
+onMounted(()=>{
+  allInterfaces.links({page:1,limit:1000}).then(res=>{
+    serveData.const = res.data.data
+  })
+})
 </script>
 
 <style scoped lang="scss">

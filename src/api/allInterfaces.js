@@ -57,8 +57,24 @@ export default {
   enterpriseList(params) {
     return fetch.get("/api/list/enterprise", params);
   },
-  // 详情:企业动态
+  // 详情:文章详情
   enterpriseContainer(params) {
     return fetch.get("/api/details/enterprise", params);
+  },
+  // 列表:行业资讯
+  industry(params) {
+    return fetch.get("/api/list/industry", params);
+  },
+  // 列表:媒体资讯
+  media(params) {
+    return fetch.get("/api/list/media", params);
+  },
+  // 首页:视频列表
+  video(params) {
+    return fetch.get("/api/video", params);
+  },
+  // 首页:友情链接
+  links(params) {
+    return fetch.get("/api/list/link", params);
   },
 };

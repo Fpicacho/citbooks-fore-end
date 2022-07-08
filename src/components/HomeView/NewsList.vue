@@ -8,9 +8,9 @@
             <router-link to="enterpriseList">{{ $t('HomeNewsList.seeMore') }} >></router-link>
           </div>
           <ul class="r">
-            <li v-for="item in newsList" :key="item.id" class="cursor" @click="jump('/articleDetails',item.id)">
+            <li v-for="item in newsList.const" :key="item.id" class="cursor" @click="jump('/articleDetails',item.id)">
               <span class="title2">{{ item.title }}</span>
-              <span class="date">{{ item.date }}</span>
+              <span class="date">{{ TimestampConversion(item.time) }}</span>
             </li>
           </ul>
         </li>
@@ -21,9 +21,9 @@
             <router-link to="industryList">{{ $t('HomeNewsList.seeMore') }} >></router-link>
           </div>
           <ul class="r">
-            <li v-for="item in booxList" :id="item.id" class="cursor" @click="jump('/articleDetails',item.id)">
+            <li v-for="item in booxList.const" :id="item.id" class="cursor" @click="jump('/articleDetails',item.id)">
               <span class="title2">{{ item.title }}</span>
-              <span>{{ item.date }}</span>
+              <span>{{TimestampConversion(item.time) }}</span>
             </li>
           </ul>
         </li>
@@ -33,7 +33,7 @@
             <div class="title">📺 {{ $t('HomeNewsList.video') }}</div>
           </div>
           <video width="320" height="240" controls="controls">
-            <source src="movie.mp4" type="video/mp4">
+            <source src="videoSrc.const" type="video/mp4">
           </video>
         </li>
       </ul>
@@ -42,62 +42,66 @@
 </template>
 
 <script setup>
-import {reactive} from 'vue'
+import {reactive, onMounted, watch, computed} from 'vue'
 import {useRouter} from 'vue-router'
+import {useStore} from 'vuex'
+import allInterfaces from "@/api/allInterfaces";
 
 const router = useRouter();
+const store = useStore();
+
+
+const newsList = reactive({
+  const: []
+})
+const booxList = reactive({
+  const: []
+})
+const videoSrc = reactive({
+  const:""
+})
+
+onMounted(() => {
+  getEnterpriseList({page: 1, limit: 5})
+  getIndustry({page: 1, limit: 5})
+  getVideo()
+})
+
+function getEnterpriseList(params) {
+  allInterfaces.enterpriseList(params).then(res => {
+    newsList.const = res.data.data
+  })
+}
+
+function getIndustry(params) {
+  allInterfaces.industry(params).then(res => {
+    booxList.const = res.data.data
+  })
+}
+
+function getVideo(){
+  allInterfaces.video().then(res=>{
+    videoSrc.const = res.data.data.usl
+  })
+}
 
 function jump(url, id) {
   router.push({path: url, query: {id: id}})
 }
+// 语言切换监听
+const getLanguageState = computed(() => {
+  return store.state.LanguageState;
+})
+watch(getLanguageState, (newVal) => {
+  getEnterpriseList({page: 1, limit: 5})
+  getIndustry({page: 1, limit: 5})
+});
+// 语言切换监听end
 
-
-const newsList = reactive([
-  {
-    id: 1,
-    title: "北京冬奥会全面开赛，让我们一起为运动健儿加油！",
-    date: "2022-10-11"
-  }, {
-    id: 2,
-    title: "中科公司协同国内出版社助力柬埔寨科学抗疫",
-    date: "2022-04-12"
-  }, {
-    id: 3,
-    title: "中科公司输出版权积极协助国际社会抗击疫情",
-    date: "2022-11-11"
-  }, {
-    id: 4,
-    title: "在常态化疫情防控中开拓创新 拥抱春天",
-    date: "2022-07-21"
-  }, {
-    id: 5,
-    title: "中科公司于泰国曼谷主办“中泰文学翻译与出版”研讨会",
-    date: "2022-05-21"
-  }
-])
-const booxList = reactive([
-  {
-    id: 1,
-    title: "北京冬奥会全面开赛，让我们一起为运动健儿加油！",
-    date: "2022-10-11"
-  }, {
-    id: 2,
-    title: "中科公司协同国内出版社助力柬埔寨科学抗疫",
-    date: "2022-04-12"
-  }, {
-    id: 3,
-    title: "中科公司输出版权积极协助国际社会抗击疫情",
-    date: "2022-11-11"
-  }, {
-    id: 4,
-    title: "在常态化疫情防控中开拓创新 拥抱春天",
-    date: "2022-07-21"
-  }, {
-    id: 5,
-    title: "中科公司于泰国曼谷主办“中泰文学翻译与出版”研讨会",
-    date: "2022-05-21"
-  }
-])
+function TimestampConversion(time) {
+  const t = new Date(time * 1000)
+  return `${t.getFullYear()}-${t.getMonth() + 1}-${t.getDate()}`
+}
 
 </script>
 
