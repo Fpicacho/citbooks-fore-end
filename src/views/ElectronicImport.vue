@@ -4,7 +4,7 @@
     <RunBanner :data="RunBannerData"/>
     <div class="container">
       <BreadNavigation :data="BreadNavigationData"/>
-      <p>电子资源进口页面</p>
+      <div v-html="container.const"></div>
     </div>
   </div>
 </template>
@@ -12,6 +12,9 @@
 <script setup>
 import RunBanner from '@/components/RunBanner'
 import BreadNavigation from '@/components/BreadNavigation';
+import {reactive,onMounted,watch,computed} from 'vue'
+import {useStore} from 'vuex'
+import allInterfaces from "@/api/allInterfaces";
 
 const RunBannerData = {
   imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
@@ -42,6 +45,28 @@ const BreadNavigationData = {
     en: "Since the production and operation of an enterprise is closely related to the fulfillment of social responsibility, in order to ensure the healthy development of the enterprise, the party organization of the enterprise must also take the fulfillment of social responsibility as an important part of the party building of the enterprise, combined with the fulfillment of social responsibility and strengthen the party building work to ensure that the enterprise fulfills its social responsibility well"
   }
 }
+const store = useStore();
+
+let container = reactive({const:""})
+onMounted(()=>{
+  getElectronics()
+})
+
+function getElectronics(){
+  allInterfaces.electronics().then(res=>{
+    container.const = res.data.container
+  })
+}
+
+// 语言切换监听
+const getLanguageState = computed(() => {
+  return store.state.LanguageState;
+})
+watch(getLanguageState, (newVal) => {
+  // 发送newVal 以告知服务端需要什么版本的文章
+  getElectronics()
+});
+// 语言切换监听end
 </script>
 
 <style scoped lang="scss">

@@ -2,7 +2,7 @@
   <div id="Banner" class="wow fadeIn">
     <n-carousel autoplay draggable show-arrow>
       <img
-          v-for="(item,index) in BannerList"
+          v-for="(item,index) in BannerList.const"
           :key="index"
           class="carousel-img"
           :src=item
@@ -13,20 +13,28 @@
 </template>
 
 <script setup>
-import {reactive} from "vue";
+import {reactive,onMounted} from "vue";
+import allInterfaces from '../../api/allInterfaces'
 
-const BannerList = reactive([
-  'http://218.94.19.14:8800/ctibooksystem//attachement_files/出版社活动图a4fcfae9-71a0-416d-9296-1c9f6b8118d6_thumb.jpg',
-  'http://218.94.19.14:8800/ctibooksystem//attachement_files/publisher21e2bafae5-bcb8-4b4d-b20d-69333ac376bf_thumb.jpg',
-  'http://218.94.19.14:8800/ctibooksystem//attachement_files/北京书展图片13fe67daa-f7e6-4306-8160-810fa0b5d406_thumb.png',
-  'http://218.94.19.14:8800/ctibooksystem//attachement_files/印尼图片3b9409d48-8f51-4aa4-aa0e-9cff545c6b79_thumb.png'
-])
+let BannerList = reactive({const:""})
+
+onMounted(()=>{
+  getBannerList()
+})
+
+function getBannerList() {
+  allInterfaces.bannerList().then(res=>{
+    BannerList.const = res.data.data
+  })
+}
+
 </script>
 
 <style scoped lang="scss">
-#Banner{
+#Banner {
   background: #fff;
 }
+
 @media only screen and (max-width: 374px) {
   .carousel-img {
     width: 100%;
@@ -49,7 +57,7 @@ const BannerList = reactive([
     height: 590px;
     object-fit: cover;
   }
-  .n-carousel__dots{
+  .n-carousel__dots {
     top: 10px;
   }
 }

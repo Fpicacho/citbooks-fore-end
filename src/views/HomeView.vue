@@ -9,14 +9,16 @@
 </template>
 
 <style scoped lang="scss">
-.home{
+.home {
   background: #fff;
 }
-.clear{
+
+.clear {
   display: none;
 }
-@media only screen and (min-width: 770px)  {
-  .home{
+
+@media only screen and (min-width: 770px) {
+  .home {
     background: #f2f3f4;
   }
 }
