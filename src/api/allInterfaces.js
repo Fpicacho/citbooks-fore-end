@@ -45,4 +45,12 @@ export default {
   professional(params) {
     return fetch.get("/api/paging/professional", params);
   },
+  // 列表:招聘信息
+  recruit(params) {
+    return fetch.get("/api/list/recruit", params);
+  },
+  // 详情:招聘信息
+  recruitContainer(params) {
+    return fetch.get("/api/details/recruit", params);
+  },
 };

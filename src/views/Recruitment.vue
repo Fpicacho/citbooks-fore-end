@@ -5,15 +5,15 @@
     <div class="container">
       <BreadNavigation :data="BreadNavigationData"/>
       <ul class="workList">
-        <li class="item wow bounceIn" v-for="item in serveData" :key="item.id">
+        <li class="item wow bounceIn" v-for="item in serveData.const" :key="item.id">
           <div class="t">
             <div class="tl">
-              <h2>{{item.JobTitle}}</h2>
-              <p>薪资:{{item.Salary}} | 年龄要求:{{item.Age}} </p>
+              <h2>{{ item.title }}</h2>
+              <p>薪资:{{ item.salary }} | 年龄要求:{{ item.age }} </p>
               <ul class="tagList">
                 <li>
-                  <n-tag type="success" v-for="(item2,index) in item.Tags">
-                    {{item2}}
+                  <n-tag type="success" v-for="(item2,index) in item.tag">
+                    {{ item2 }}
                   </n-tag>
                 </li>
               </ul>
@@ -22,9 +22,9 @@
           </div>
           <div class="b">
             <p>
-              待遇福利： 五天八小时工作制（标准）；国家法定休假及带薪年假； 养老，医疗，失业，工伤，生育保险及住房公积金，商业保险；
+              {{ item.introduction }}
             </p>
-            <n-button strong type="primary">
+            <n-button strong type="primary" @click="goto(item.id)">
               查看详情
             </n-button>
           </div>
@@ -36,10 +36,13 @@
 </template>
 
 <script setup>
-import {ref} from "vue"
+import {reactive, onMounted} from "vue"
+import {useRouter} from 'vue-router'
 import RunBanner from '@/components/RunBanner'
 import BreadNavigation from '@/components/BreadNavigation'
+import allInterfaces from "@/api/allInterfaces";
 
+const router = useRouter()
 const RunBannerData = {
   imgUrl: 'https://pic2.zhimg.com/v2-2b27b6fda1165550a9ce0ddcf4bd3d10_r.jpg',
   title: {
@@ -69,39 +72,19 @@ const BreadNavigationData = {
     en: "Talent is the most important resource and most valuable wealth of an enterprise. To cultivate people with lofty careers, to unite people with good culture and sincere feelings, and to stabilize people with reasonable treatment is the company's talent concept; to respect talents, cherish talents, and use Good talents, cultivating talents, and motivating talents are the company's employment principles; it is our talent construction goal to create a professional team that dares to take responsibility, has the courage to innovate, has excellent professionalism and excellent quality. The company warmly welcomes all kinds of talents to join our team and jointly create a more brilliant tomorrow!"
   }
 }
-const serveData = ref([
-  {
-    Id:1,
-    JobTitle:"销售精英",
-    Salary:"5k~6k",
-    Age:"18~35",
-    Tags:['五险一金','交通补贴','生日福利'],
-    Describe:"待遇福利： 五天八小时工作制（标准）；国家法定休假及带薪年假； 养老，医疗，失业，工伤，生育保险及住房公积金，商业保险；"
-  },
-  {
-    Id:2,
-    JobTitle:"市场部专员",
-    Salary:"5k~6k",
-    Age:"18~35",
-    Tags:['免费午餐','全国游'],
-    Describe:"待遇福利： 五天八小时工作制（标准）；国家法定休假及带薪年假； 养老，医疗，失业，工伤，生育保险及住房公积金，商业保险；"
-  },
-  {
-    Id:3,
-    JobTitle:"编目专员",
-    Salary:"5k~6k",
-    Age:"18~35",
-    Tags:['下午茶','长假','餐补'],
-    Describe:"待遇福利： 五天八小时工作制（标准）；国家法定休假及带薪年假； 养老，医疗，失业，工伤，生育保险及住房公积金，商业保险；"
-  },
-  {
-    Id:4,
-    JobTitle:"开发工程师",
-    Salary:"5k~6k",
-    Age:"18~35",
-    Tags:['技术分享会','带薪学习','5倍加班费'],
-  }
-])
+const serveData = reactive({
+  const: []
+})
+onMounted(() => {
+  allInterfaces.recruit().then(res => {
+    // console.log(res.data.data)
+    serveData.const = res.data.data
+  })
+})
+function goto(id){
+  router.push({path: '/recruitmentContainer', query: {id}})
+}
+
 </script>
 
 <style scoped lang="scss">
@@ -109,40 +92,48 @@ const serveData = ref([
   width: 75%;
   margin: 20px auto;
 }
-#Recruitment{
-  .workList{
+
+#Recruitment {
+  .workList {
     display: grid;
-    grid-template-columns: repeat(3,32%);
+    grid-template-columns: repeat(3, 32%);
     justify-content: space-between;
     grid-row-gap: 25px;
-    .item{
+
+    .item {
       padding: 5px 20px;
       border: 1px solid #EBEBEB;
       cursor: pointer;
       transition: all .3s;
-      &:hover{
+
+      &:hover {
         box-shadow: 10px 10px 30px #c1c1c1;
         transition: all .3s;
       }
-      .t{
+
+      .t {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        img{
+
+        img {
           width: 70px;
           height: 70px;
         }
-        .tagList{
-          .n-tag{
+
+        .tagList {
+          .n-tag {
             margin-right: 10px;
           }
         }
       }
-      .b{
+
+      .b {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        p{
+
+        p {
           font-size: 14px;
           width: 65%;
           line-height: 18px;
@@ -160,11 +151,12 @@ const serveData = ref([
     }
   }
 }
+
 @media only screen and (max-width: 770px) {
   #Recruitment {
-    .workList{
+    .workList {
       display: grid;
-      grid-template-columns: repeat(1,100%);
+      grid-template-columns: repeat(1, 100%);
       justify-content: space-between;
       grid-row-gap: 25px;
     }

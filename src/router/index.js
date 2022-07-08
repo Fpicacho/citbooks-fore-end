@@ -110,6 +110,12 @@ const routes = [
     component: () => import("../views/ArticleDetails"),
   },
   {
+    // 招聘信息详情
+    path: "/recruitmentContainer",
+    name: "RecruitmentContainer",
+    component: () => import("../views/RecruitmentContainer"),
+  },
+  {
     // 404
     path: "/404",
     name: "404",
