@@ -95,4 +95,8 @@ module.exports = {
   currentPosition: "当前位置:",
   // 企业文化标语
   slogan: "创新 诚信 服务 求实",
+  //
+  loadMore: "加载更多",
+  noMore: "没有更多了",
+  seeMore: "查看更多+",
 };

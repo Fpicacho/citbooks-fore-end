@@ -97,4 +97,7 @@ module.exports = {
   currentPosition: "CurrentPosition:",
   // 企业文化标语
   slogan: "Innovation Integrity Service Realistic",
+  loadMore: "Load More",
+  noMore: "No More",
+  seeMore: "See More+",
 };

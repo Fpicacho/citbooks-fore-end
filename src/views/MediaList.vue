@@ -17,16 +17,16 @@
                 TimestampConversion(item.time, "date")
               }}</p>
             <p class="describe">{{ item.introduction }}</p>
-            <p class="more">查看更多+</p>
+            <p class="more">{{$t('seeMore')}}</p>
           </div>
         </li>
       </ul>
       <div style="text-align: center; margin-top:20px">
         <n-button strong secondary type="primary" style="width:30%" @click="load" v-if="isNull.const">
-          加载更多
+          {{$t('loadMore')}}
         </n-button>
         <n-button strong secondary type="primary" style="width:30%" @click="load" disabled v-else >
-          没有更多了
+          {{$t('noMore')}}
         </n-button>
       </div>
     </div>
