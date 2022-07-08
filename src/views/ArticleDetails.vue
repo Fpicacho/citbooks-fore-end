@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <div v-html="container.const"></div>
+    <BreadNavigation :data="BreadNavigationData"/>
+    <h1 style="text-align: center">{{container.const.title}}</h1>
+    <div v-html="container.const.content"></div>
   </div>
 </template>
 
@@ -9,15 +11,38 @@ import { useRoute } from "vue-router";
 import {reactive,onMounted,watch,computed} from 'vue'
 import {useStore} from 'vuex'
 import allInterfaces from "@/api/allInterfaces";
+import BreadNavigation from '@/components/BreadNavigation';
 const route = useRoute();
 const store = useStore();
 let container = reactive({const:""})
+const BreadNavigationData = {
+  title: {
+    cn: '',
+    en: ''
+  },
+  navigation: [
+    {
+      link: "/",
+      cn: "媒体资讯",
+      en: "MediaInformation"
+    },
+    {
+      link: "/mediaList",
+      cn: "媒体资讯",
+      en: "MediaInformation"
+    }
+  ],
+  describe: {
+    cn: "",
+    en: ""
+  }
+}
 onMounted(() => {
   getEnterpriseContainer()
 })
 function getEnterpriseContainer(){
   allInterfaces.enterpriseContainer({id:route.query.id}).then(res=>{
-    container.const = res.data.data[0].content
+    container.const = res.data.data[0]
   })
 }
 // 语言切换监听
