@@ -53,4 +53,12 @@ export default {
   recruitContainer(params) {
     return fetch.get("/api/details/recruit", params);
   },
+  // 列表:企业动态
+  enterpriseList(params) {
+    return fetch.get("/api/list/enterprise", params);
+  },
+  // 详情:企业动态
+  enterpriseContainer(params) {
+    return fetch.get("/api/details/enterprise", params);
+  },
 };
