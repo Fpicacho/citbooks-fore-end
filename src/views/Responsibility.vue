@@ -15,10 +15,11 @@ import BreadNavigation from '@/components/BreadNavigation';
 import {reactive,onMounted,watch,computed} from 'vue'
 import {useStore} from 'vuex'
 import allInterfaces from "@/api/allInterfaces";
+import img from "@/assets/img/breadImg/dangjian.jpg"
 const store = useStore();
 
 const RunBannerData = {
-  imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
+  imgUrl: img,
   title: {
     cn: '社会和党建责任',
     en: 'Social and Party Building Responsibilities'

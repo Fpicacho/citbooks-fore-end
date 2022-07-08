@@ -15,9 +15,10 @@ import BreadNavigation from '@/components/BreadNavigation';
 import {reactive,onMounted,watch,computed} from 'vue'
 import {useStore} from 'vuex'
 import allInterfaces from "@/api/allInterfaces";
+import url from '@/assets/img/breadImg/zhuanyeyanjiu.jpg'
 
 const RunBannerData = {
-  imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
+  imgUrl: url,
   title: {
     cn: '专业研究',
     en: 'Professional Studies'

@@ -40,9 +40,10 @@ import RunBanner from '@/components/RunBanner'
 import BreadNavigation from '@/components/BreadNavigation';
 import allInterfaces from "@/api/allInterfaces";
 import {useStore} from 'vuex'
+import url from '@/assets/img/breadImg/new1.jpg'
 
 const RunBannerData = {
-  imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
+  imgUrl: url,
   title: {
     cn: '企业动态',
     en: 'Entreprise News'

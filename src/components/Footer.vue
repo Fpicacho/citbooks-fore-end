@@ -43,7 +43,7 @@
         <p class="workDay">{{$t('Footer[22]')}} <br>{{$t('Footer[23]')}}</p>
       </div>
       <div class="qrcodeBox">
-        <img src="http://www.ctibooks.com.cn:80/css/img/tmcodenum.jpg" alt="" style="border-radius:15px">
+        <img :src="qrcode.url" alt="" style="border-radius:15px">
         <p>{{$t('Footer[24]')}}</p>
       </div>
     </div>
@@ -52,7 +52,16 @@
 </template>
 
 <script setup>
-
+import {reactive,onMounted} from 'vue'
+import allInterfaces from "@/api/allInterfaces";
+const qrcode = reactive({
+  url:""
+})
+onMounted(()=>{
+  allInterfaces.WebInfo().then(res=>{
+    qrcode.url = res.data.data.qrcode
+  })
+})
 </script>
 
 <style scoped lang="scss">

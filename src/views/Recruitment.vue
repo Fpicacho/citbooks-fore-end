@@ -41,10 +41,11 @@ import {useRouter} from 'vue-router'
 import RunBanner from '@/components/RunBanner'
 import BreadNavigation from '@/components/BreadNavigation'
 import allInterfaces from "@/api/allInterfaces";
+import img from "@/assets/img/breadImg/zhaopin.jpg"
 
 const router = useRouter()
 const RunBannerData = {
-  imgUrl: 'https://pic2.zhimg.com/v2-2b27b6fda1165550a9ce0ddcf4bd3d10_r.jpg',
+  imgUrl: img,
   title: {
     cn: '招聘信息',
     en: 'Recruitment'

@@ -3,17 +3,24 @@
   <div id="Copyright">
     <div class="container">
       <p>{{$t('Copyright[0]')}}</p>
-      <p>{{$t('Copyright[1]')}}</p>
+      <p>{{$t('Copyright[1]')}} {{RecordNo.nub}}</p>
       <p>{{$t('Copyright[2]')}}</p>
       <p>{{$t('Copyright[3]')}}</p>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "Copyright"
-}
+<script setup>
+import {reactive,onMounted} from 'vue'
+import allInterfaces from "@/api/allInterfaces";
+const RecordNo = reactive({
+  nub:""
+})
+onMounted(()=>{
+  allInterfaces.WebInfo().then(res=>{
+    RecordNo.nub = res.data.data.RecordNo
+  })
+})
 </script>
 
 <style scoped lang="scss">

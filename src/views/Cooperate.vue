@@ -21,8 +21,9 @@ import {reactive, onMounted, watch, computed} from 'vue'
 import RunBanner from '@/components/RunBanner'
 import BreadNavigation from '@/components/BreadNavigation';
 import allInterfaces from "@/api/allInterfaces";
+import img from '@/assets/img/breadImg/hezuohuoban.jpg'
 const RunBannerData = {
-  imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
+  imgUrl: img,
   title: {
     cn: '合作伙伴',
     en: 'Partner'

@@ -86,8 +86,9 @@
 
 <script setup>
 import RunBanner from '@/components/RunBanner'
+import img from '@/assets/img/breadImg/zuzhijiegou.jpeg'
 const RunBannerData = {
-  imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
+  imgUrl: img,
   title: {
     cn: '组织机构',
     en: 'Organization'

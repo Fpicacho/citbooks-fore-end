@@ -15,9 +15,10 @@ import BreadNavigation from '@/components/BreadNavigation';
 import {reactive,onMounted,watch,computed} from 'vue'
 import {useStore} from 'vuex'
 import allInterfaces from "@/api/allInterfaces";
+import img from '@/assets/img/breadImg/dianziziyuanjinko.jpg'
 
 const RunBannerData = {
-  imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
+  imgUrl: img,
   title: {
     cn: '电子资源进口',
     en: 'Import of electronic resources'

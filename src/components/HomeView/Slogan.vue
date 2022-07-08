@@ -1,6 +1,6 @@
 <template>
 <div id="Slogan">
-  <p>创新 诚信 服务 求实</p>
+  <p>{{$t('slogan')}}</p>
 </div>
 </template>
 

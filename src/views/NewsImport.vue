@@ -15,9 +15,10 @@ import BreadNavigation from '@/components/BreadNavigation';
 import {reactive,onMounted,watch,computed} from 'vue'
 import {useStore} from 'vuex'
 import allInterfaces from "@/api/allInterfaces";
+import url from '@/assets/img/breadImg/baokan.jpg'
 
 const RunBannerData = {
-  imgUrl: 'http://www.chinawanda.com/static/images/tx_banner.jpg',
+  imgUrl: url,
   title: {
     cn: '报刊进口',
     en: 'Newspaper import'
