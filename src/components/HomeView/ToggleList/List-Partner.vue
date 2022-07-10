@@ -2,7 +2,7 @@
   <div id="Partner">
     <ul>
       <li v-for="item in serveData.const" :key="item.id" class="wow flip">
-        <img :src="item.img" alt="">
+        <img :src="item.imgUrl" alt="">
         <p>{{ item.introduction }}</p>
       </li>
     </ul>
@@ -28,6 +28,7 @@ const serveData = reactive({
 onMounted(()=>{
   allInterfaces.links({page:1,limit:12}).then(res=>{
     serveData.const = res.data.data
+    console.log(serveData.const)
   })
 })
 
@@ -92,6 +93,7 @@ p {
           top: 0;
           display: none;
           height: 100%;
+          min-width: 100%;
         }
 
         &:hover {

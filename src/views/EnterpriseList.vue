@@ -94,7 +94,6 @@ function load() {
         serveData.const.push(item)
       })
     }
-
   })
 }
 

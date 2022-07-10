@@ -7,7 +7,7 @@
     <div id="Partner">
       <ul>
         <li v-for="item in serveData.const" :key="item.id" class="wow flip">
-          <img :src="item.img" alt="">
+          <img :src="item.imgUrl" alt="">
           <p>{{item.describe}}</p>
         </li>
       </ul>
@@ -114,6 +114,7 @@ onMounted(()=>{
           top: 0;
           display: none;
           height: 100%;
+          min-width: 100%;
         }
         &:hover{
           p{

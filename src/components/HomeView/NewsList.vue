@@ -32,8 +32,8 @@
           <div class="l">
             <div class="title">📺 {{ $t('HomeNewsList.video') }}</div>
           </div>
-          <video width="320" height="240" controls="controls">
-            <source src="videoSrc.const" type="video/mp4">
+          <video width="320" height="240" controls="controls" :src="videoSrc.const">
+<!--            <source  type="video/mp4">-->
           </video>
         </li>
       </ul>
