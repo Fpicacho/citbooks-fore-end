@@ -77,4 +77,12 @@ export default {
   links(params) {
     return fetch.get("/api/list/link", params);
   },
+  // 单页:企业介绍
+  aboutus(params) {
+    return fetch.get("/api/paging/aboutus", params);
+  },
+  // 列表:社会与党建责任
+  news(params) {
+    return fetch.get("/api/paging/news", params);
+  },
 };

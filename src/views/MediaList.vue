@@ -57,8 +57,8 @@ const BreadNavigationData = {
   navigation: [
     {
       link: "/",
-      cn: "媒体资讯",
-      en: "MediaInformation"
+      cn: "首页",
+      en: "Home"
     },
     {
       link: "/mediaList",

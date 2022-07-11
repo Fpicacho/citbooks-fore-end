@@ -32,14 +32,14 @@ const BreadNavigationData = {
   },
   navigation: [
     {
-      link: "/",
-      cn: "关于我们",
-      en: "About us"
+      link:"/",
+      cn:"首页",
+      en:"Home"
     },
     {
       link: "/responsibility",
-      cn: "党建责任",
-      en: "responsibility"
+      cn: "社会与党建责任",
+      en: "SocialAndPartyBuildingResponsibilities"
     },
   ],
   describe: {

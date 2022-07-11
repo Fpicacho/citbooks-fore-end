@@ -1,6 +1,6 @@
 <template>
   <div id="ElectronicImport">
-    <!--  媒体报道列表-->
+    <!--  企业动态列表-->
     <RunBanner :data="RunBannerData"/>
     <div class="container">
       <BreadNavigation :data="BreadNavigationData"/>
@@ -57,8 +57,8 @@ const BreadNavigationData = {
   navigation: [
     {
       link: "/",
-      cn: "企业动态",
-      en: "EntrepriseNews"
+      cn: "首页",
+      en: "Home"
     },
     {
       link: "/enterpriseList",

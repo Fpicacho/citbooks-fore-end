@@ -32,8 +32,8 @@ const BreadNavigationData = {
   navigation: [
     {
       link: "/",
-      cn: "公司业务",
-      en: "Business"
+      cn: "首页",
+      en: "Home"
     },
     {
       link: "/newsImport",

@@ -8,7 +8,7 @@
       <ul>
         <li v-for="item in serveData.const" :key="item.id" class="wow flip">
           <img :src="item.imgUrl" alt="">
-          <p>{{item.describe}}</p>
+          <p>{{item.introduction}}</p>
         </li>
       </ul>
     </div>
@@ -37,8 +37,8 @@ const BreadNavigationData={
   navigation:[
     {
       link:"/",
-      cn:"关于我们",
-      en:"About us"
+      cn:"首页",
+      en:"Home"
     },
     {
       link:"/cooperate",

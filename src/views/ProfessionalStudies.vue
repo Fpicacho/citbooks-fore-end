@@ -32,8 +32,8 @@ const BreadNavigationData = {
   navigation: [
     {
       link: "/",
-      cn: "特色服务",
-      en: "special service"
+      cn: "首页",
+      en: "Home"
     },
     {
       link: "/professionalStudies",

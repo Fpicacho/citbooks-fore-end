@@ -28,7 +28,6 @@ const serveData = reactive({
 onMounted(()=>{
   allInterfaces.links({page:1,limit:12}).then(res=>{
     serveData.const = res.data.data
-    console.log(serveData.const)
   })
 })
 

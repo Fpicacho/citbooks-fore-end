@@ -6,12 +6,7 @@
       <div class="contentBox">
         <div class="l wow slideInLeft">
           <h1>{{$t('introduction.title')}}</h1>
-          <p>{{$t('introduction.container[0]')}}</p>
-          <p>{{$t('introduction.container[1]')}}</p>
-          <p>{{$t('introduction.container[2]')}}</p>
-          <p>{{$t('introduction.container[3]')}}</p>
-          <p>{{$t('introduction.container[4]')}}</p>
-          <p>{{$t('introduction.container[5]')}}</p>
+          <div v-html="container.const"></div>
         </div>
         <div class="r wow slideInRight">
           <ul class="digitalList">
@@ -28,22 +23,31 @@
               <p>{{$t('introduction.tag[2]')}}</p>
             </li>
           </ul>
-          <img :src="img1" alt="">
-        </div>
-      </div>
 
+          <div style="text-align: center">
+            <img :src="img1" alt="">
+            <n-button type="primary" strong secondary style="width: 90%;" @click="router.push({path: '/'})" >
+              返回首页
+            </n-button>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import {watch, computed} from 'vue'
+import {reactive,onMounted,watch,computed} from 'vue'
 import {useStore} from 'vuex'
+import {useRouter} from 'vue-router'
+import allInterfaces from "@/api/allInterfaces";
 import RunBanner from '@/components/RunBanner'
 import img1 from '@/assets/img/breadImg/rc.jpeg'
 import img2 from '@/assets/img/breadImg/gongsijianjie.jpg'
 
 const store = useStore();
+const router = useRouter();
 const RunBannerData = {
   imgUrl: img2,
   title: {
@@ -52,13 +56,25 @@ const RunBannerData = {
   }
 }
 
+let container = reactive({const:""})
+onMounted(()=>{
+  getAboutus()
+})
+
+
+function getAboutus(){
+  allInterfaces.aboutus().then(res=>{
+    container.const = res.data.container
+  })
+}
+
 // 语言切换监听
 const getLanguageState = computed(() => {
   return store.state.LanguageState;
 })
 watch(getLanguageState, (newVal) => {
   // 发送newVal 以告知服务端需要什么版本的文章
-  console.log(newVal)
+  getAboutus()
 });
 // 语言切换监听end
 

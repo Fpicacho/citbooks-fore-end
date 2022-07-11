@@ -32,8 +32,8 @@ const BreadNavigationData = {
   navigation: [
     {
       link: "/",
-      cn: "公司业务",
-      en: "Business"
+      cn: "首页",
+      en: "Home"
     },
     {
       link: "/electronicImport",
@@ -76,4 +76,5 @@ watch(getLanguageState, (newVal) => {
   width: 75%;
   margin: 20px auto;
 }
+
 </style>

@@ -32,8 +32,8 @@ const BreadNavigationData = {
   navigation: [
     {
       link: "/",
-      cn: "公司业务",
-      en: "About us"
+      cn: "首页",
+      en: "Home"
     },
     {
       link: "/electronicImport",

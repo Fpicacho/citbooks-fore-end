@@ -58,9 +58,9 @@ const BreadNavigationData = {
   },
   navigation: [
     {
-      link: "/",
-      cn: "关于我们",
-      en: "About us"
+      link:"/",
+      cn:"首页",
+      en:"Home"
     },
     {
       link: "/recruitment",
