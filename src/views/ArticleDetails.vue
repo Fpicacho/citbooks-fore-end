@@ -45,7 +45,6 @@ const BreadNavigationData = {
 onMounted(() => {
   getEnterpriseContainer()
 })
-
 function getEnterpriseContainer() {
   allInterfaces.enterpriseContainer({id: route.query.id}).then(res => {
     container.const = res.data.data[0]

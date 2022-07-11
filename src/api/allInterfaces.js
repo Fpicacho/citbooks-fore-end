@@ -83,6 +83,6 @@ export default {
   },
   // 列表:社会与党建责任
   news(params) {
-    return fetch.get("/api/paging/news", params);
+    return fetch.get("/api/list/news", params);
   },
 };
