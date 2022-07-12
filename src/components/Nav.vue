@@ -5,6 +5,7 @@
         <img src="../assets/img/logo.png" alt="" class="wow slideInLeft">
       </router-link>
     </div>
+
     <div class="navList wow slideInRight">
       <n-dropdown trigger="click"
                   :options="options"
@@ -20,6 +21,7 @@
       <ChangeLanguageBtn style="margin-left: 10px" @click="ChangeLanguage"/>
     </div>
     <div class="pc-navList wow slideInRight">
+      <router-link to="/" class="home">{{$t("home")}}</router-link>
       <n-menu mode="horizontal" :options="options" @update:value="handleSelect"/>
       <ChangeLanguageBtn @click="ChangeLanguage"/>
     </div>
@@ -170,6 +172,17 @@ function ChangeLanguage() {
   align-items: center;
   padding: 16px;
   border-bottom: 1px solid #efeff5;
+  .home{
+    font-size: 14px;
+    color: #333639;
+    padding: 0 20px;
+    text-decoration: none;
+    transition:0.3s all;
+    &:hover{
+      color: #18a058;
+      transition:0.3s all;
+    }
+  }
 }
 @media only screen and (max-width: 374px) {
   #Nav{

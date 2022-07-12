@@ -100,4 +100,5 @@ module.exports = {
   loadMore: "Load More",
   noMore: "No More",
   seeMore: "See More+",
+  home: "Home",
 };

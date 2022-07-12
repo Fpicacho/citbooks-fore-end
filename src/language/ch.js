@@ -99,4 +99,5 @@ module.exports = {
   loadMore: "加载更多",
   noMore: "没有更多了",
   seeMore: "查看更多+",
+  home: "首页",
 };
