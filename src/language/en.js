@@ -50,15 +50,15 @@ module.exports = {
     Businessexport: "Businessexport",
     BookFairServices: "BookFairServices",
     ImportoforiginalbooksMS:
-      "In the autumn of Renxu, in the seventh month of the month, Su Zi and the guest were paddling under the red cliffs. The breeze is coming, and the water waves are not happy. Wine is a guest, recite the poem of the bright moon, and sing the chapter of slenderness.",
+      "After years of in-depth cultivation, the China National Science and Technology Information Import and Export Corporation has formed a business chain of original book...",
     ImportofelectronicresourcesMS:
-      "In the autumn of Renxu, in the seventh month of the month, Su Zi and the guest were paddling under the red cliffs. The breeze is coming, and the water waves are not happy. Wine is a guest, recite the poem of the bright moon, and sing the chapter of slenderness.",
+      "The agency import of electronic resources/databases is an important business of our company, which is growing rapidly... ",
     NewspaperimportMS:
-      "In the autumn of Renxu, in the seventh month of the month, Su Zi and the guest were paddling under the red cliffs. The breeze is coming, and the water waves are not happy. Wine is a guest, recite the poem of the bright moon, and sing the chapter of slenderness.",
+      "China National Science and Technology Information Import and Export Corporation is one of the main domestic journal import service providers... ",
     BusinessexportMS:
-      "In the autumn of Renxu, in the seventh month of the month, Su Zi and the guest were paddling under the red cliffs. The breeze is coming, and the water waves are not happy. Wine is a guest, recite the poem of the bright moon, and sing the chapter of slenderness.",
+      "The export business of China National Science and Technology Information Import and Export Corporation mainly includes the export of physical cultural...",
     BookFairServicesMS:
-      "In the autumn of Renxu, in the seventh month of the month, Su Zi and the guest were paddling under the red cliffs. The breeze is coming, and the water waves are not happy. Wine is a guest, recite the poem of the bright moon, and sing the chapter of slenderness.",
+      'In line with the service concept of "finding books for people and people for books", our company has innovatively designed and developed a sales and service model for the import and sales of academic original books, which is called the overseas academic original book tour exhibition (referred to as "MBE"). "MBE" brings more convenience to the library\'s foreign language book purchase, allows the library to get the greatest discount, and at the same time shortens the ...',
   },
   // 首页关于我们
   AboutUs: {

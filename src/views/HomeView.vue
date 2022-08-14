@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <Slogan/>
-    <Banner/>
-    <BusinessList/>
-    <NewsList/>
-    <ToggleList/>
+      <Slogan/>
+      <Banner/>
+      <BusinessList/>
+      <NewsList/>
+      <ToggleList/>
   </div>
 </template>
 

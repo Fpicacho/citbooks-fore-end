@@ -26,9 +26,6 @@
 
           <div style="text-align: center">
             <img :src="img1" alt="">
-            <n-button type="primary" strong secondary style="width: 90%;" @click="router.push({path: '/'})" >
-              返回首页
-            </n-button>
           </div>
         </div>
 

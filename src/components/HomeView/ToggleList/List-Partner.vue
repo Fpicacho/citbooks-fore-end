@@ -8,7 +8,7 @@
     </ul>
     <div style="text-align: center">
       <n-button strong secondary type="primary" style="width:50%" @click="jump('/cooperate')">
-        查看更多
+        {{$t('seeMore')}}
       </n-button>
     </div>
   </div>

@@ -1,75 +1,68 @@
 <template>
   <!--页脚 src/components/Footer.vue-->
-<div id="Footer">
-  <div class="container">
-    <div class="link">
-      <ul class="linkNav wow bounceInLeft">
-        <li class="linkNavList">
-          <h1>{{$t('Footer[0]')}}</h1>
-          <router-link to="/introduction">{{$t('Footer[1]')}}</router-link>
-          <router-link to="/organize">{{$t('Footer[2]')}}</router-link>
-          <router-link to="/cooperate">{{$t('Footer[3]')}}</router-link>
-          <router-link to="/culture">{{$t('Footer[4]')}}</router-link>
-          <router-link to="/responsibility">{{$t('Footer[5]')}}</router-link>
-          <router-link to="/recruitment">{{$t('Footer[6]')}}</router-link>
-        </li>
-        <li class="linkNavList">
-          <h1>{{$t('Footer[7]')}}</h1>
-          <router-link to="/bookImport">{{$t('Footer[8]')}}</router-link>
-          <router-link to="/electronicImport">{{$t('Footer[9]')}}</router-link>
-          <router-link to="/newsImport">{{$t('Footer[10]')}}</router-link>
-          <router-link to="/exportBusiness">{{$t('Footer[11]')}}</router-link>
-        </li>
-      </ul>
-      <ul class="linkNav wow bounceInLeft">
-        <li class="linkNavList">
-          <h1>{{$t('Footer[12]')}}</h1>
-          <router-link to="/enterpriseList">{{$t('Footer[13]')}}</router-link>
-          <router-link to="/industryList">{{$t('Footer[14]')}}</router-link>
-          <router-link to="/mediaList">{{$t('Footer[15]')}}</router-link>
-        </li>
-        <li class="linkNavList">
-          <h1>{{$t('Footer[16]')}}</h1>
-          <router-link to="/bookFairServices">{{$t('Footer[17]')}}</router-link>
-          <router-link to="/dataProcessing">{{$t('Footer[18]')}}</router-link>
-          <router-link to="/professionalStudies">{{$t('Footer[19]')}}</router-link>
-        </li>
-      </ul>
-    </div>
-    <div class="information wow bounceInUp">
-      <div class="phoneBox">
-        <p><a href="tel:010-88820201">010-88820201</a> <span>{{$t('Footer[20]')}}</span></p>
-        <p><a href="tel:025-83314729">025-83314729</a> <span>{{$t('Footer[21]')}}</span></p>
-        <p class="workDay">{{$t('Footer[22]')}} <br>{{$t('Footer[23]')}}</p>
+  <div id="Footer">
+    <div class="container">
+      <div class="link">
+        <ul class="linkNav wow bounceInLeft">
+          <li class="linkNavList">
+            <h1>{{ $t('Footer[0]') }}</h1>
+            <router-link to="/introduction">{{ $t('Footer[1]') }}</router-link>
+            <router-link to="/organize">{{ $t('Footer[2]') }}</router-link>
+            <router-link to="/cooperate">{{ $t('Footer[3]') }}</router-link>
+            <router-link to="/culture">{{ $t('Footer[4]') }}</router-link>
+            <router-link to="/responsibility">{{ $t('Footer[5]') }}</router-link>
+            <router-link to="/recruitment">{{ $t('Footer[6]') }}</router-link>
+          </li>
+          <li class="linkNavList">
+            <h1>{{ $t('Footer[7]') }}</h1>
+            <router-link to="/bookImport">{{ $t('Footer[8]') }}</router-link>
+            <router-link to="/electronicImport">{{ $t('Footer[9]') }}</router-link>
+            <router-link to="/newsImport">{{ $t('Footer[10]') }}</router-link>
+            <router-link to="/exportBusiness">{{ $t('Footer[11]') }}</router-link>
+          </li>
+        </ul>
+        <ul class="linkNav wow bounceInLeft">
+          <li class="linkNavList">
+            <h1>{{ $t('Footer[12]') }}</h1>
+            <router-link to="/enterpriseList">{{ $t('Footer[13]') }}</router-link>
+            <router-link to="/industryList">{{ $t('Footer[14]') }}</router-link>
+            <router-link to="/mediaList">{{ $t('Footer[15]') }}</router-link>
+          </li>
+          <li class="linkNavList">
+            <h1>{{ $t('Footer[16]') }}</h1>
+            <router-link to="/bookFairServices">{{ $t('Footer[17]') }}</router-link>
+            <router-link to="/dataProcessing">{{ $t('Footer[18]') }}</router-link>
+            <router-link to="/professionalStudies">{{ $t('Footer[19]') }}</router-link>
+          </li>
+        </ul>
       </div>
-      <div class="qrcodeBox">
-        <img :src="qrcode.url" alt="" style="border-radius:15px">
-        <p>{{$t('Footer[24]')}}</p>
+      <div class="information wow bounceInUp">
+        <div class="phoneBox">
+          <p><a href="tel:010-88820201">010-88820201</a> <span>{{ $t('Footer[20]') }}</span></p>
+          <p><a href="tel:025-83314729">025-83314729</a> <span>{{ $t('Footer[21]') }}</span></p>
+          <p class="workDay">{{ $t('Footer[22]') }} <br>{{ $t('Footer[23]') }}</p>
+        </div>
+        <div class="qrcodeBox">
+          <img :src="props.footerData.data.qrcode" alt="" style="border-radius:15px">
+          <p>{{ $t('Footer[24]') }}</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script setup>
-import {reactive,onMounted} from 'vue'
-import allInterfaces from "@/api/allInterfaces";
-const qrcode = reactive({
-  url:""
-})
-onMounted(()=>{
-  allInterfaces.WebInfo().then(res=>{
-    qrcode.url = res.data.data.qrcode
-  })
-})
+import {defineProps} from 'vue'
+const props = defineProps(['footerData'])
 </script>
 
 <style scoped lang="scss">
-p,h1{
+p, h1 {
   margin: 0;
   padding: 0;
 }
-#Footer{
+
+#Footer {
   //background: #333333;
   background: #fafafc;
   padding: 30px 16px;
@@ -77,56 +70,66 @@ p,h1{
   border-top: 1px solid rgb(239, 239, 245);
   //color: #fff;
   color: #4c4c4c;
-  .linkNav{
+
+  .linkNav {
     display: flex;
     justify-content: space-around;
     text-align: center;
     margin-bottom: 25px;
-    .linkNavList{
-      h1{
+
+    .linkNavList {
+      h1 {
         font-size: 20px;
         color: #4c4c4c;
         border-bottom: 2px solid #007bff;
         font-weight: 100;
       }
-      a{
-        margin-top:10px;
+
+      a {
+        margin-top: 10px;
         color: #999999;
         font-size: 14px;
         text-decoration: none;
         display: block;
         transition: color .3s;
-        &:hover{
+
+        &:hover {
           transition: color .3s;
-          color:#007bff;
+          color: #007bff;
         }
       }
     }
   }
-  .information{
+
+  .information {
     text-align: center;
-    .phoneBox{
+
+    .phoneBox {
       font-size: 24px;
-      a{
+
+      a {
         color: #298dff;
         text-decoration: none;
       }
+
       //span{
       //  color: #fff;
       //}
-      .workDay{
+      .workDay {
         font-size: 16px;
         //color: #fff;
-        margin:20px 0;
+        margin: 20px 0;
       }
     }
   }
-  .qrcodeBox{
-    img{
+
+  .qrcodeBox {
+    img {
       width: 100px;
       height: 100px;
       transition: all .3s;
-      &:hover{
+
+      &:hover {
         width: 200px;
         height: 200px;
         transition: all .3s;
@@ -134,29 +137,32 @@ p,h1{
     }
   }
 }
+
 @media only screen and (min-width: 770px) {
-  .container{
+  .container {
     width: 85%;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
   }
   #Footer {
     display: flex;
-    justify-content:space-around;
-    .link{
+    justify-content: space-around;
+
+    .link {
       display: flex;
       width: 45%;
-      justify-content:space-around;
-      .linkNav{
-        width:45%;
+      justify-content: space-around;
+
+      .linkNav {
+        width: 45%;
         display: flex;
 
       }
     }
   }
-  .information{
+  .information {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     width: 30%;
   }
 }

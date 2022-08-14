@@ -71,7 +71,7 @@ function jump(id) {
     font-size: 14px;
   }
   ul li .item{
-    height: 200px;
+    height: 300px;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -117,7 +117,7 @@ function jump(id) {
         width: 32.5%;
         &:nth-child(3){
           .item{
-            height: 87.3%;
+            height: 90.6%;
           }
         }
       }

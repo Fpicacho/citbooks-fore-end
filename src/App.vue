@@ -5,8 +5,8 @@
   <router-view/>
   <!--全局页脚&版权信息-->
   <div class="fooferBox">
-    <Footer/>
-    <Copyright/>
+    <Footer :footerData="footerData"/>
+    <Copyright :footerData="footerData"/>
   </div>
 </template>
 
@@ -58,7 +58,8 @@ body {
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Copyright from '@/components/Copyright'
-import { onMounted } from 'vue'
+import allInterfaces from "@/api/allInterfaces";
+import { onMounted,reactive } from 'vue'
 
 
 // 全局滚动动画方法基本配置
@@ -71,8 +72,14 @@ let wow = new WOW({
   live: true
 });
 wow.init();
+const footerData = reactive({
+  data:""
+})
 onMounted(() => {
   window.localStorage.setItem("LanguageState", "ch");
+  allInterfaces.WebInfo().then(res=>{
+    footerData.data = res.data.data
+  })
 })
 
 </script>
