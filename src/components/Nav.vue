@@ -106,6 +106,14 @@ const options = reactive([
       label: "专业研究",
       key: "ProfessionalStudies",
     }]
+  },
+  {
+    label: "线上书展",
+    key: "booklist",
+    children: [{
+      label: "线上书展",
+      key: "Ctiweb",
+    }]
   }
 ])
 
@@ -175,9 +183,12 @@ function ChangeLanguage() {
   .home{
     font-size: 14px;
     color: #333639;
-    padding: 0 20px;
     text-decoration: none;
     transition:0.3s all;
+    height: 42px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-bottom: 2px solid #0000;
     &:hover{
       color: #18a058;
       transition:0.3s all;

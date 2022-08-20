@@ -116,6 +116,11 @@ const routes = [
     component: () => import("../views/RecruitmentContainer"),
   },
   {
+    path: "/ctiweb",
+    name: "Ctiweb",
+    component: () => import("../views/Ctiweb"),
+  },
+  {
     // 404
     path: "/404",
     name: "404",
