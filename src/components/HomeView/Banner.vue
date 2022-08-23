@@ -33,9 +33,17 @@ function getBannerList() {
 <style scoped lang="scss">
 #Banner {
   background: #fff;
+  width: 80%;
+  margin: 0 auto;
+  height: 500px;
 }
 
 @media only screen and (max-width: 374px) {
+  #Banner {
+    margin: 0;
+    width: 100%;
+    height: 240px;
+  }
   .carousel-img {
     width: 100%;
     height: 240px;
@@ -44,6 +52,11 @@ function getBannerList() {
 }
 
 @media only screen and (min-width: 374px) and (max-width: 769px) {
+    #Banner {
+    margin: 0;
+    width: 100%;
+        height: 240px;
+  }
   .carousel-img {
     width: 100%;
     height: 240px;

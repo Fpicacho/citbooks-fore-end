@@ -2,9 +2,10 @@ module.exports = {
   // 全局版权
   Copyright: [
     "Copyright © China National Science and Technology Materials Import and Export Corporation",
-    "Beijing ICP No.: ",
+    "ICP registration subject number: ",
     "Address (Beijing): Room 2307, Block B, Century Economic and Trade Building, No. 72, Xisanhuan North Road, Haidian District, Beijing",
     "Address (Nanjing): 11th Floor, Tiancheng Building, No. 199, Guangzhou Road, Gulou District, Nanjing City, Jiangsu Province",
+    "ICP filing website number"
   ],
   // 全局页脚
   Footer: [
@@ -30,7 +31,7 @@ module.exports = {
     "Professional Studies",
     "Beijing",
     "Nanjing",
-    "Weekdays 9:00-12:00 13:30-18:00",
+    "Weekdays：8:30-11:45 13:00-17:00",
     "On-duty service on Saturdays and some holidays",
     "Zhongke Data Tmall Flagship Store",
   ],

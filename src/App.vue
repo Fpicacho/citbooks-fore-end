@@ -37,7 +37,7 @@ body {
   #app {
     font-size: 0.16rem;
     color: #333333;
-    #Nav{
+    #Navv{
       position:sticky;
       top: 0;
       background: #fff;
