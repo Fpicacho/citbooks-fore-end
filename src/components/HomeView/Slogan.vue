@@ -13,6 +13,8 @@ export default {
 <style scoped lang="scss">
 #Slogan {
   background: #fff;
+  width: 80%;
+  margin: 0 auto;
   p {
     text-align: center;
     margin: 0;
@@ -45,24 +47,30 @@ export default {
 }
 @media only screen and (max-width: 374px) {
   #Slogan {
-    p{
+    width: 100%;
+    margin: 0;
+    p {
       font-size: 0.1rem;
     }
-}
+  }
 }
 @media only screen and (max-width: 449px) {
   #Slogan {
-    p{
+    width: 100%;
+    margin: 0;
+    p {
       font-size: 0.1rem;
     }
-}
+  }
 }
 
 @media only screen and (min-width: 374px) and (max-width: 769px) {
   #Slogan {
-    p{
+    width: 100%;
+    margin: 0;
+    p {
       font-size: 0.1rem;
     }
-}
+  }
 }
 </style>
