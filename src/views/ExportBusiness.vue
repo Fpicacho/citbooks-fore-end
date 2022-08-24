@@ -75,3 +75,10 @@ watch(getLanguageState, (newVal) => {
   margin: 20px auto;
 }
 </style>
+<style>
+@media only screen and (max-width: 770px) {
+  img{
+    width: 100%;
+  }
+}
+</style>

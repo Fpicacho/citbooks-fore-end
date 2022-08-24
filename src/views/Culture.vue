@@ -80,3 +80,11 @@ watch(getLanguageState, (newVal) => {
   }
 }
 </style>
+
+<style>
+@media only screen and (max-width: 770px) {
+  img{
+    width: 100%;
+  }
+}
+</style>
