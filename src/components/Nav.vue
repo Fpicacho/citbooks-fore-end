@@ -6,7 +6,6 @@
           <img src="../assets/img/logo.png" alt="" class="wow slideInLeft" />
         </router-link>
       </div>
-
       <div class="navList wow slideInRight">
         <n-dropdown
           trigger="click"
@@ -136,18 +135,23 @@ const options = reactive([
   },
   {
     label: "线上书展",
-    key: "booklist",
+    key: "boolList",
     children: [
       {
         label: "线上书展",
-        key: "Ctiweb",
+        key: "http://www.baidu.com/dsada?type=1000",
       },
     ],
   },
 ]);
 
 function handleSelect(key) {
-  router.push({ name: key });
+  const RegExr = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+  if (RegExr.test(key)) {
+    window.open(key, "_blank");
+  } else {
+    router.push({ name: key });
+  }
 }
 
 function ChangeLanguage() {
@@ -173,6 +177,8 @@ function ChangeLanguage() {
     options[3].children[0].label = "BookFairServices";
     options[3].children[1].label = "DataProcessing";
     options[3].children[2].label = "ProfessionalStudies";
+    options[4].label = "Online book fair";
+    options[4].children[0].label = "Online book fair";
   } else {
     language.value = "cn";
     options[0].label = "关于我们";
@@ -195,12 +201,14 @@ function ChangeLanguage() {
     options[3].children[0].label = "书展服务";
     options[3].children[1].label = "数据加工";
     options[3].children[2].label = "专业研究";
+    options[4].label = "线上书展";
+    options[4].children[0].label = "线上书展";
   }
 }
 </script>
 
 <style scoped lang="scss">
-#Navv{
+#Navv {
   border-bottom: 1px solid #e0e0e6;
 }
 #Nav {
@@ -289,7 +297,7 @@ function ChangeLanguage() {
 }
 </style>
 <style>
-  .n-menu-item-content-header{
-    font-size: 16px;
-  }
+.n-menu-item-content-header {
+  font-size: 16px;
+}
 </style>
