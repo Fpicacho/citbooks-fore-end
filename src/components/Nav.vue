@@ -47,7 +47,7 @@ const router = useRouter();
 
 const options = reactive([
   {
-    label: "公司简介",
+    label: "关于我们",
     key: "AboutUs",
     children: [
       {
@@ -153,7 +153,7 @@ function handleSelect(key) {
 function ChangeLanguage() {
   if (language.value === "cn") {
     language.value = "en";
-    options[0].label = "Company Profile";
+    options[0].label = "AboutUs";
     options[0].children[0].label = "Company Profile";
     options[0].children[1].label = "OrganizationalStructure";
     options[0].children[2].label = "Partner";
@@ -175,7 +175,7 @@ function ChangeLanguage() {
     options[3].children[2].label = "ProfessionalStudies";
   } else {
     language.value = "cn";
-    options[0].label = "公司简介";
+    options[0].label = "关于我们";
     options[0].children[0].label = "公司简介";
     options[0].children[1].label = "组织结构";
     options[0].children[2].label = "合作伙伴";
@@ -212,7 +212,7 @@ function ChangeLanguage() {
   margin: 0 auto;
 
   .home {
-    font-size: 14px;
+    font-size: 16px;
     color: #333639;
     text-decoration: none;
     transition: 0.3s all;
@@ -220,6 +220,7 @@ function ChangeLanguage() {
     line-height: 40px;
     padding: 0 20px;
     border-bottom: 2px solid #0000;
+    border-bottom: 0;
     &:hover {
       color: #18a058;
       transition: 0.3s all;
@@ -286,4 +287,9 @@ function ChangeLanguage() {
     }
   }
 }
+</style>
+<style>
+  .n-menu-item-content-header{
+    font-size: 16px;
+  }
 </style>

@@ -9,8 +9,8 @@
         <div class="ContentContainer wow slideInRight">
           <p>
             {{ $t('AboutUs.content[0]') }}<br/><br/>
-            {{ $t('AboutUs.content[1]') }}<br/><br/>
-            {{ $t('AboutUs.content[2]') }}
+            <!-- {{ $t('AboutUs.content[1]') }}<br/><br/>
+            {{ $t('AboutUs.content[2]') }} -->
           </p>
           <div class="box">
             <router-link to="/introduction">
@@ -107,17 +107,16 @@ export default {
         width: 35%;
         position: relative;
         p {
-          font-size: 36px;
+          font-size: 28px;
           font-weight: bold;
           position: relative;
-          top: 25px;
-          left: 5px;
+          top: 7px;
           z-index: 1;
         }
 
         span {
           display: block;
-          font-size: 72px;
+          font-size: 45px;
           color: #f8f8f8;
           font-weight: bold;
           font-family: 'Arial Black', serif;

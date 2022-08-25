@@ -4,7 +4,7 @@
     <RunBanner :data="RunBannerData"/>
     <div class="container">
       <BreadNavigation :data="BreadNavigationData"/>
-      <div v-html="container.const"></div>
+      <div v-html="container.const" class="htmlDoc"></div>
     </div>
   </div>
 </template>
@@ -78,10 +78,12 @@ watch(getLanguageState, (newVal) => {
 }
 
 </style>
-<style>
+<style lang="scss">
 @media only screen and (max-width: 770px) {
-  img{
-    width: 100%;
+  .htmlDoc {
+    img {
+      width: 100% !important;
+    }
   }
 }
 </style>

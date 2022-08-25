@@ -31,9 +31,11 @@ module.exports = {
     "Professional Studies",
     "Beijing",
     "Nanjing",
-    "Weekdays：8:30-11:45 13:00-17:00",
-    "On-duty service on Saturdays and some holidays",
-    "Zhongke Data Tmall Flagship Store",
+    "Working days: Monday - Friday",
+    "On duty service is provided on Saturdays, Sundays and some holidays",
+    "China Science Information tmall flagship store",
+    "Working hours: 8:30 - 11:45",
+    "13：00 - 17：30"
   ],
   // 首页新闻列表
   HomeNewsList: {
@@ -63,7 +65,7 @@ module.exports = {
   },
   // 首页关于我们
   AboutUs: {
-    title: "AboutUs",
+    title: "Company profile",
     content: [
       "China National Science and Technology Materials Import and Export Corporation is a state-owned enterprise approved by the former Ministry of Foreign Trade and Economic Cooperation in 1987. The company is mainly engaged in the import business of books, newspapers, periodicals, electronic documents and e-books, copyright import and export business, and related wholesale and retail business. Qualified company.",
       'Zhongke Company pursues to provide customers with "professional, humanized and personalized" professional services in its operation, and has successively set up offices in Beijing, Nanjing, Shanghai, Guangzhou, Wuhan, Chengdu, and Xi\'an to ensure timely customer service. response. China Science and Technology Corporation has created an excellent reputation in the industry with its profound professional accumulation and meticulous and thoughtful service, and its customer coverage and business volume have grown exponentially. In addition, the company also has a long-term good business relationship with domestic public libraries, scientific research institutes and other book and literature institutions.',
@@ -77,7 +79,7 @@ module.exports = {
       "Zhongke Company is willing to cooperate sincerely with other institutions such as overseas publishing houses, domestic college libraries, research institute document centers, public libraries and other institutions to jointly discuss the construction of library collections in the new era.",
       "Through years of operation, our company has established cooperative relations or business contacts with nearly 1,000 well-known publishing groups or publishing houses around the world, maintaining good business relations and becoming one of the largest agents in mainland China. Our company strives to expand the procurement channels for books in small languages, out-of-print or long-published books, especially opening up the procurement channels for books in Southeast Asia, which improves the difficulty of purchasing books in this region in the past and improves customer satisfaction. The overall booking rate of original foreign language books ranks among the best in the industry.",
     ],
-    bar: ["About us", "Partner", "socialResponsibility"],
+    bar: ["Company profile", "Partner", "socialResponsibility"],
     aus: ["Was founded in", "Registered capital", "Service object", "M"],
   },
   // 公司简介正文 introduction
