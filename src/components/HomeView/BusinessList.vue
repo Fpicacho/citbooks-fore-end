@@ -1,126 +1,81 @@
 <template>
-  <div id="BusinessList">
-    <ul>
-      <li>
-        <div class="item a1 wow bounceIn" @click="jump('bookImport')">
-          <div>
-            <h1 class="title">{{$t('BusinessList.Importoforiginalbooks')}}</h1>
-            <p class="describe">{{$t('BusinessList.ImportoforiginalbooksMS')}}</p>
-          </div>
-          <p>{{$t('BusinessList.LearnMore')}}→</p>
-        </div>
-        <div class="item a2 wow bounceIn" @click="jump('electronicImport')">
-          <div>
-            <h1 class="title">{{$t('BusinessList.Importofelectronicresources')}}</h1>
-            <p class="describe">{{$t('BusinessList.ImportofelectronicresourcesMS')}}</p>
-          </div>
-          <p>{{$t('BusinessList.LearnMore')}}→</p>
-        </div>
-      </li>
-      <li>
-        <div class="item a3 wow bounceIn" @click="jump('newsImport')">
-          <div>
-            <h1 class="title">{{$t('BusinessList.Newspaperimport')}}</h1>
-            <p class="describe">{{$t('BusinessList.NewspaperimportMS')}}</p>
-          </div>
-          <p>{{$t('BusinessList.LearnMore')}}→</p>
-        </div>
-        <div class="item a4 wow bounceIn"  @click="jump('exportBusiness')">
-          <div>
-            <h1 class="title">{{$t('BusinessList.Businessexport')}}</h1>
-            <p class="describe">{{$t('BusinessList.BusinessexportMS')}}</p>
-          </div>
-          <p>{{$t('BusinessList.LearnMore')}}→</p>
-        </div>
-      </li>
-      <li>
-        <div class="item a5 wow bounceIn" @click="jump('bookFairServices')">
-          <div>
-            <h1 class="title">{{$t('BusinessList.BookFairServices')}}</h1>
-            <p class="describe">{{$t('BusinessList.BookFairServicesMS')}}</p>
-          </div>
-          <p>{{$t('BusinessList.LearnMore')}}→</p>
-        </div>
-      </li>
-    </ul>
+  <!-- src\components\HomeView\BusinessList.vue -->
+  <div>
+    <div class="BusinessList">
+      <img src="../../assets/img/yewu/BJ1.jpg" @click="jump('bookImport')" />
+      <img src="../../assets/img/yewu/BJ2.jpg" @click="jump('newsImport')" />
+      <img
+        src="../../assets/img/yewu/BJ3.jpg"
+        @click="jump('bookFairServices')"
+      />
+      <img
+        src="../../assets/img/yewu/BJ4.jpg"
+        @click="jump('electronicImport')"
+      />
+      <img
+        src="../../assets/img/yewu/BJ5.jpg"
+        @click="jump('exportBusiness')"
+      />
+      <img
+        src="../../assets/img/yewu/BJ6.jpg"
+        @click="showModal = !showModal"
+      />
+    </div>
+    <!-- 业务平台模态框 -->
+    <n-modal v-model:show="showModal">
+      <n-card
+        style="width: 600px"
+        title="业务平台链接"
+        :bordered="false"
+        size="huge"
+        role="dialog"
+        aria-modal="true"
+      >
+        <p>
+          <a href="">书展平台</a>
+        </p>
+        <p>
+          <a href="">书目采选</a>
+        </p>
+      </n-card>
+    </n-modal>
   </div>
 </template>
 
 <script setup>
-import {useRouter} from 'vue-router'
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 const router = useRouter();
 
+const showModal = ref(false);
+
 function jump(id) {
-  router.push(id)
+  router.push(id);
 }
 </script>
 
 <style scoped lang="scss">
-#BusinessList{
-  background: #f2f3f4;
-  padding: 30px 16px;
-  h1,p{
-    margin: 0;
-    padding: 0;
-  }
-  h1{
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  p{
-    font-size: 14px;
-  }
-  ul li .item{
-    height: 300px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-around;
-    color: #fff;
+.BusinessList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px auto;
+  img {
+    width: 32.5%;
     margin-bottom: 20px;
-    transition: all .3s;
-    &:hover{
-      justify-content: space-between;
-      transition: all .3s;
-      cursor:pointer;
-    }
-  }
-  .a1{
-    background: url('../../assets/img/BusinessListBgc1.jpg');
-    background-size: 100% auto;
-  }
-  .a2{
-    background: url('../../assets/img/BusinessListBgc2.jpg');
-    background-size: 100% auto;
-  }
-  .a3{
-    background: url('../../assets/img/BusinessListBgc3.jpeg');
-    background-size: 100% auto;
-  }
-  .a4{
-    background: url('../../assets/img/BusinessListBgc4.jpeg');
-    background-size: 100% auto;
-  }
-  .a5{
-    background: url('../../assets/img/BusinessListBgc5.jpg');
-    background-size: 100% auto;
+    cursor: pointer;
   }
 }
-@media only screen and (min-width: 770px)  {
-  #BusinessList{
+@media screen and (max-width: 770px) {
+  .BusinessList {
     width: 80%;
     margin: 35px auto;
-    ul{
-      display: flex;
-      justify-content: space-between;
-      li{
-        width: 32.5%;
-        &:nth-child(3){
-          .item{
-            height: 90.6%;
-          }
-        }
-      }
+    flex-direction: column;
+    img {
+      width: 100%;
+      margin-bottom: 0;
+      margin-top: 5px;
     }
   }
 }
