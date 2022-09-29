@@ -32,7 +32,7 @@
         aria-modal="true"
       >
         <p>
-          <a href="http://bookshow.ctibooks.com.cn/#/login" target="_blank">书展平台</a>
+          <a href="http://bookshow.ctibooks.com.cn/#/" target="_blank">书展平台</a>
         </p>
         <p>
           <a href="http://218.94.19.14:50101/ctiweb/newSelectBook/bookSelectIndex.action" target="_blank">书目采选</a>

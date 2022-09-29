@@ -134,12 +134,16 @@ const options = reactive([
     ],
   },
   {
-    label: "线上书展",
-    key: "boolList",
+    label: "业务平台",
+    key: "ywpt",
     children: [
       {
         label: "线上书展",
-        key: "http://www.baidu.com/dsada?type=1000",
+        key: "http://bookshow.ctibooks.com.cn/#/",
+      },
+      {
+        label: "书目采选",
+        key: "http://218.94.19.14:50101/ctiweb/newSelectBook/bookSelectIndex.action",
       },
     ],
   },
@@ -177,8 +181,9 @@ function ChangeLanguage() {
     options[3].children[0].label = "BookFairServices";
     options[3].children[1].label = "DataProcessing";
     options[3].children[2].label = "ProfessionalStudies";
-    options[4].label = "Online book fair";
-    options[4].children[0].label = "Online book fair";
+    options[4].label = "Business platform";
+    options[4].children[0].label = "Online Book Fair";
+    options[4].children[1].label = "Bibliographic selection";
   } else {
     language.value = "cn";
     options[0].label = "关于我们";
@@ -201,8 +206,9 @@ function ChangeLanguage() {
     options[3].children[0].label = "书展服务";
     options[3].children[1].label = "数据加工";
     options[3].children[2].label = "专业研究";
-    options[4].label = "线上书展";
+    options[4].label = "业务平台";
     options[4].children[0].label = "线上书展";
+    options[4].children[1].label = "书目采选";
   }
 }
 </script>
