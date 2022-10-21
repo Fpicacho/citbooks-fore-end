@@ -55,8 +55,12 @@ function jump(id) {
 </script>
 
 <style scoped lang="scss">
+a {
+  outline:none;
+}
 .n-card {
-  width: 25% !important;
+  width: 320px !important;
+  text-align: center;
 }
 .BusinessList {
   display: flex;
