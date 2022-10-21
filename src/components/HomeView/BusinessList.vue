@@ -55,6 +55,9 @@ function jump(id) {
 </script>
 
 <style scoped lang="scss">
+.n-card {
+  width: 25% !important;
+}
 .BusinessList {
   display: flex;
   flex-wrap: wrap;
@@ -68,6 +71,9 @@ function jump(id) {
   }
 }
 @media screen and (max-width: 770px) {
+  .n-card {
+  width: 70% !important;
+}
   .BusinessList {
     width: 80%;
     margin: 35px auto;
