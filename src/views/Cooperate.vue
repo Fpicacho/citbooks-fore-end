@@ -47,8 +47,8 @@ const BreadNavigationData={
     },
   ],
   describe:{
-    cn:"随着公司不断地发展，中国科技资料进出口总公司的优质服务已延伸到更加宽广的领域， 我们获得了众多来自各行业企业的合作，以下展示部分合作伙伴的LOGO(排名不分先后):",
-    en:"With the continuous development of the company, the high-quality service of China National Science and Technology Materials Import and Export Corporation has been extended to a wider field. We have obtained cooperation from many enterprises in various industries. The following shows the LOGO of some partners (in no particular order):"
+    cn:"中科公司在经营中坚持走专业化、个性化和人性化的服务，为众多国内高校、科研院所、公共图书馆和企事业单位提供专业类外文研究资料和综合类图书资料。我公司与境外包括全部主流出版社在内的近千家出版机构有业务往来或建立了合作关系，合作伙伴遍布美国、英国、德国、法国、荷兰、澳大利亚、加拿大、瑞士、西班牙、新加坡等众多国家。（以下展示部分合作院校、公共图书馆、出版社LOGO，排名不分先后）",
+    en:"Sinopec adheres to professional, personalized and humanized services in its business, and provides professional foreign language research materials and comprehensive books for many domestic universities, research institutes, public libraries, enterprises and institutions. Our company has business contacts or established cooperative relationships with nearly 1000 overseas publishing institutions, including all mainstream publishers. Our partners are located in the United States, the United Kingdom, Germany, France, the Netherlands, Australia, Canada, Switzerland, Spain, Singapore and many other countries. (The following shows the LOGO of some cooperative colleges, public libraries and publishing houses in no particular order)"
   }
 }
 const serveData = reactive({
