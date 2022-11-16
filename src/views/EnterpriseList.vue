@@ -45,14 +45,14 @@ import url from '@/assets/img/breadImg/new1.jpg'
 const RunBannerData = {
   imgUrl: url,
   title: {
-    cn: '企业动态',
-    en: 'Entreprise News'
+    cn: '公司动态',
+    en: 'CompanyDynamics'
   }
 }
 const BreadNavigationData = {
   title: {
-    cn: "企业动态",
-    en: "Entreprise News"
+    cn: "公司动态",
+    en: "CompanyDynamics"
   },
   navigation: [
     {
@@ -62,8 +62,8 @@ const BreadNavigationData = {
     },
     {
       link: "/enterpriseList",
-      cn: "企业动态",
-      en: "Electronic"
+      cn: "公司动态",
+      en: "CompanyDynamics"
     },
   ],
   describe: {

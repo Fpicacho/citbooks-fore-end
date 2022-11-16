@@ -47,8 +47,8 @@ const BreadNavigationData={
     },
   ],
   describe:{
-    cn:"中科公司在经营中坚持走专业化、个性化和人性化的服务，为众多国内高校、科研院所、公共图书馆和企事业单位提供专业类外文研究资料和综合类图书资料。我公司与境外包括全部主流出版社在内的近千家出版机构有业务往来或建立了合作关系，合作伙伴遍布美国、英国、德国、法国、荷兰、澳大利亚、加拿大、瑞士、西班牙、新加坡等众多国家。（以下展示部分合作院校、公共图书馆、出版社LOGO，排名不分先后）",
-    en:"Sinopec adheres to professional, personalized and humanized services in its business, and provides professional foreign language research materials and comprehensive books for many domestic universities, research institutes, public libraries, enterprises and institutions. Our company has business contacts or established cooperative relationships with nearly 1000 overseas publishing institutions, including all mainstream publishers. Our partners are located in the United States, the United Kingdom, Germany, France, the Netherlands, Australia, Canada, Switzerland, Spain, Singapore and many other countries. (The following shows the LOGO of some cooperative colleges, public libraries and publishing houses in no particular order)"
+    cn:"中科公司在经营中坚持专业化、个性化和人性化的服务宗旨，为众多国内高校、科研院所、公共图书馆和企事业单位提供专业类外文研究资料和综合类图书资料。我公司与境外包括全部主流出版社在内的近千家出版机构有业务往来或建立了合作关系，合作伙伴遍布美国、英国、德国、法国、荷兰、澳大利亚、加拿大、瑞士、西班牙、新加坡等众多国家。（以下展示部分合作院校、公共图书馆、出版社LOGO，排名不分先后）",
+    en:"Sinopec adheres to the service tenet of specialization, personalization and humanization in its operation, and provides professional foreign language research materials and comprehensive books for many domestic universities, research institutes, public libraries, enterprises and institutions. Our company has business contacts or established cooperative relationships with nearly 1000 overseas publishing institutions, including all mainstream publishers. Our partners are located in the United States, the United Kingdom, Germany, France, the Netherlands, Australia, Canada, Switzerland, Spain, Singapore and many other countries. (The following shows the LOGO of some cooperative colleges, public libraries and publishing houses in no particular order)"
   }
 }
 const serveData = reactive({

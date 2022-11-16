@@ -98,11 +98,11 @@ const options = reactive([
     ],
   },
   {
-    label: "企业动态",
+    label: "新闻动态",
     key: "news",
     children: [
       {
-        label: "企业动态",
+        label: "公司动态",
         key: "EnterpriseList",
       },
       {
@@ -174,7 +174,7 @@ function ChangeLanguage() {
     options[1].children[2].label = "NewspaperImport";
     options[1].children[3].label = "ExportBusiness";
     options[2].label = "News";
-    options[2].children[0].label = "EntrepriseNews";
+    options[2].children[0].label = "CompanyDynamics";
     options[2].children[1].label = "IndustryInformation";
     options[2].children[2].label = "MediaInformation";
     options[3].label = "SpecialFunction";
@@ -198,8 +198,8 @@ function ChangeLanguage() {
     options[1].children[1].label = "电子资源进口";
     options[1].children[2].label = "报刊进口";
     options[1].children[3].label = "出口业务";
-    options[2].label = "企业动态";
-    options[2].children[0].label = "企业动态";
+    options[2].label = "新闻动态";
+    options[2].children[0].label = "公司动态";
     options[2].children[1].label = "行业资讯";
     options[2].children[2].label = "媒体资讯";
     options[3].label = "特色服务";
